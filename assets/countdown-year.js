@@ -337,6 +337,6 @@ catch(err) {
 });
 
 if (!runningTests) {
-  require("countdown-year/app")["default"].create({"name":"countdown-year","version":"0.0.0+cf95e679"});
+  require("countdown-year/app")["default"].create({"name":"countdown-year","version":"0.0.0+c6ffd154"});
 }
 //# sourceMappingURL=countdown-year.map
