@@ -1,12 +1,81 @@
 {{!-- The following component displays Ember's default welcome message. --}}
 {{!welcome-page}}
 {{!-- Feel free to remove this! --}}
+<div class="container">
+    <br/>
+    <h4 class="center">{{mainVideo.title}}</h4>
+    {{ember-youtube ytid=mainVideo.id playerVars=playerVars width='100%' delegate=this delegate-as="emberYoutube"}}
 
-{{ember-youtube ytid="fZ7MhTRmJ60" playerVars=myPlayerVars}}
-{{ember-youtube ytid="fZ7MhTRmJ60" playerVars=myPlayerVars}}
-{{ember-youtube ytid="fZ7MhTRmJ60" playerVars=myPlayerVars}}
-{{ember-youtube ytid="fZ7MhTRmJ60" playerVars=myPlayerVars}}
-{{#link-to 'page1'}}page1{{/link-to}}
-{{#link-to 'page2'}}page2{{/link-to}}
-<br/>
-{{outlet}}
+    <button {{action "togglePlay" target=emberYoutube}} class="btn-floating waves-effect waves-light">
+        {{#if emberYoutube.isPlaying}}
+            <i class="material-icons">&#xE034;</i>
+        {{else}}
+            <i class="material-icons">&#xE037;</i>
+        {{/if}}
+    </button>
+    <button {{action "toggleVolume" target=emberYoutube}} class="btn-floating waves-effect waves-light">
+        {{#if emberYoutube.isMuted}}
+            <i class="material-icons">&#xE04F;</i>
+        {{else}}
+            <i class="material-icons">&#xE050;</i>
+        {{/if}}
+    </button>
+
+    <hr/>
+    <div class="row">
+        {{#each ytSubVideos as |ytVideo|}}
+            <div class="col s6 m4 l3">
+                <button {{action 'adjust' ytVideo}} class="btn-floating waves-effect waves-write">
+                    <i class="small material-icons">arrow_upward</i>
+                </button>
+                <small>{{ytVideo.title}}</small>
+                {{ember-youtube ytid=ytVideo.id playerVars=subPlayerVars width='100%' height='100%' delegate=this delegate-as=ytVideo.emberYoutube}}
+
+                {{#if (eq ytVideo.id 'Jv3zvWZlXkk')}}
+                    <button {{action "togglePlay" target=emberYoutube0}} class="btn-floating waves-effect waves-light">
+                        {{#if emberYoutube0.isPlaying}}<i class="material-icons">&#xE034;</i>{{else}}<i class="material-icons">&#xE037;</i>{{/if}}
+                    </button>
+                    <button {{action "toggleVolume" target=emberYoutube0}} class="btn-floating waves-effect waves-light">
+                        {{#if emberYoutube0.isMuted}}<i class="material-icons">&#xE04F;</i>{{else}}<i class="material-icons">&#xE050;</i>{{/if}}
+                    </button>
+                {{/if}}
+                {{#if (eq ytVideo.id 'pd3eV-SG23E')}}
+                    <button {{action "togglePlay" target=emberYoutube1}} class="btn-floating waves-effect waves-light">
+                        {{#if emberYoutube1.isPlaying}}<i class="material-icons">&#xE034;</i>{{else}}<i class="material-icons">&#xE037;</i>{{/if}}
+                    </button>
+                    <button {{action "toggleVolume" target=emberYoutube1}} class="btn-floating waves-effect waves-light">
+                        {{#if emberYoutube1.isMuted}}<i class="material-icons">&#xE04F;</i>{{else}}<i class="material-icons">&#xE050;</i>{{/if}}
+                    </button>
+                {{/if}}
+                {{#if (eq ytVideo.id '38lcQsEMGrk')}}
+                    <button {{action "togglePlay" target=emberYoutube2}} class="btn-floating waves-effect waves-light">
+                        {{#if emberYoutube2.isPlaying}}<i class="material-icons">&#xE034;</i>{{else}}<i class="material-icons">&#xE037;</i>{{/if}}
+                    </button>
+                    <button {{action "toggleVolume" target=emberYoutube2}} class="btn-floating waves-effect waves-light">
+                        {{#if emberYoutube2.isMuted}}<i class="material-icons">&#xE04F;</i>{{else}}<i class="material-icons">&#xE050;</i>{{/if}}
+                    </button>
+                {{/if}}
+                {{#if (eq ytVideo.id '_o0oeyCtoFA')}}
+                    <button {{action "togglePlay" target=emberYoutube3}} class="btn-floating waves-effect waves-light">
+                        {{#if emberYoutube3.isPlaying}}<i class="material-icons">&#xE034;</i>{{else}}<i class="material-icons">&#xE037;</i>{{/if}}
+                    </button>
+                    <button {{action "toggleVolume" target=emberYoutube3}} class="btn-floating waves-effect waves-light">
+                        {{#if emberYoutube3.isMuted}}<i class="material-icons">&#xE04F;</i>{{else}}<i class="material-icons">&#xE050;</i>{{/if}}
+                    </button>
+                {{/if}}
+                {{#if (eq ytVideo.id 'zBJjFEE0rUc')}}
+                    <button {{action "togglePlay" target=emberYoutube4}} class="btn-floating waves-effect waves-light">
+                        {{#if emberYoutube4.isPlaying}}<i class="material-icons">&#xE034;</i>{{else}}<i class="material-icons">&#xE037;</i>{{/if}}
+                    </button>
+                    <button {{action "toggleVolume" target=emberYoutube4}} class="btn-floating waves-effect waves-light">
+                        {{#if emberYoutube4.isMuted}}<i class="material-icons">&#xE04F;</i>{{else}}<i class="material-icons">&#xE050;</i>{{/if}}
+                    </button>
+                {{/if}}
+            </div>
+        {{/each}}
+    </div>
+    {{!#link-to 'page1'}}<!--page1-->{{!/link-to}}
+    {{!#link-to 'page2'}}<!--page2-->{{!/link-to}}
+    <br/>
+    {{outlet}}
+</div>

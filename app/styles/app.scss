@@ -1,1 +1,16 @@
-@import 'ember-paper';
+@import "materialize-css/sass/components/color";
+
+$color: #fff;
+$primary-color: #ffffff;
+$primary-color-light: #ffffff;
+$primary-color-dark: #cccccc;
+$secondary-color: #326C41; //#366640;
+
+$navbar-height: 94px;
+$navbar-height-mobile: 56px;
+$accent-color: #E1EDDF;
+$accent-color-2: #F2F2F2;
+$accent-color-3: #75C6E5;
+
+@import "materialize-css/sass/materialize";
+
