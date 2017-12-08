@@ -10,6 +10,11 @@ define('countdown-year/tests/app.lint-test', [], function () {
     assert.ok(true, 'app.js should pass ESLint\n\n');
   });
 
+  QUnit.test('controllers/application.js', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'controllers/application.js should pass ESLint\n\n');
+  });
+
   QUnit.test('resolver.js', function (assert) {
     assert.expect(1);
     assert.ok(true, 'resolver.js should pass ESLint\n\n');
@@ -41,6 +46,84 @@ define('countdown-year/tests/helpers/destroy-app', ['exports'], function (export
   function destroyApp(application) {
     run(application, 'destroy');
   }
+});
+define('countdown-year/tests/helpers/ember-basic-dropdown', ['exports', 'ember-basic-dropdown/test-support/helpers', 'ember-native-dom-helpers'], function (exports, _helpers, _emberNativeDomHelpers) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.nativeClick = exports.fireKeydown = exports.tapTrigger = exports.clickTrigger = exports.nativeTap = undefined;
+  Object.defineProperty(exports, 'nativeTap', {
+    enumerable: true,
+    get: function () {
+      return _helpers.nativeTap;
+    }
+  });
+  Object.defineProperty(exports, 'clickTrigger', {
+    enumerable: true,
+    get: function () {
+      return _helpers.clickTrigger;
+    }
+  });
+  Object.defineProperty(exports, 'tapTrigger', {
+    enumerable: true,
+    get: function () {
+      return _helpers.tapTrigger;
+    }
+  });
+  Object.defineProperty(exports, 'fireKeydown', {
+    enumerable: true,
+    get: function () {
+      return _helpers.fireKeydown;
+    }
+  });
+  exports.default = _helpers.default;
+  var nativeClick = exports.nativeClick = _emberNativeDomHelpers.click;
+});
+define('countdown-year/tests/helpers/ember-power-select', ['exports', 'ember-power-select/test-support/helpers'], function (exports, _helpers) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.selectChoose = exports.touchTrigger = exports.nativeTouch = exports.clickTrigger = exports.typeInSearch = exports.triggerKeydown = exports.nativeMouseUp = exports.nativeMouseDown = exports.findContains = undefined;
+  exports.default = deprecatedRegisterHelpers;
+
+
+  function deprecateHelper(fn, name) {
+    return function () {
+      (true && !(false) && Ember.deprecate('DEPRECATED `import { ' + name + ' } from \'../../tests/helpers/ember-power-select\';` is deprecated. Please, replace it with `import { ' + name + ' } from \'ember-power-select/test-support/helpers\';`', false, { until: '1.11.0', id: 'ember-power-select-test-support-' + name }));
+
+      return fn.apply(undefined, arguments);
+    };
+  }
+
+  var findContains = deprecateHelper(_helpers.findContains, 'findContains');
+  var nativeMouseDown = deprecateHelper(_helpers.nativeMouseDown, 'nativeMouseDown');
+  var nativeMouseUp = deprecateHelper(_helpers.nativeMouseUp, 'nativeMouseUp');
+  var triggerKeydown = deprecateHelper(_helpers.triggerKeydown, 'triggerKeydown');
+  var typeInSearch = deprecateHelper(_helpers.typeInSearch, 'typeInSearch');
+  var clickTrigger = deprecateHelper(_helpers.clickTrigger, 'clickTrigger');
+  var nativeTouch = deprecateHelper(_helpers.nativeTouch, 'nativeTouch');
+  var touchTrigger = deprecateHelper(_helpers.touchTrigger, 'touchTrigger');
+  var selectChoose = deprecateHelper(_helpers.selectChoose, 'selectChoose');
+
+  function deprecatedRegisterHelpers() {
+    (true && !(false) && Ember.deprecate("DEPRECATED `import registerPowerSelectHelpers from '../../tests/helpers/ember-power-select';` is deprecated. Please, replace it with `import registerPowerSelectHelpers from 'ember-power-select/test-support/helpers';`", false, { until: '1.11.0', id: 'ember-power-select-test-support-register-helpers' }));
+
+    return (0, _helpers.default)();
+  }
+
+  exports.findContains = findContains;
+  exports.nativeMouseDown = nativeMouseDown;
+  exports.nativeMouseUp = nativeMouseUp;
+  exports.triggerKeydown = triggerKeydown;
+  exports.typeInSearch = typeInSearch;
+  exports.clickTrigger = clickTrigger;
+  exports.nativeTouch = nativeTouch;
+  exports.touchTrigger = touchTrigger;
+  exports.selectChoose = selectChoose;
 });
 define('countdown-year/tests/helpers/module-for-acceptance', ['exports', 'qunit', 'countdown-year/tests/helpers/start-app', 'countdown-year/tests/helpers/destroy-app'], function (exports, _qunit, _startApp, _destroyApp) {
   'use strict';
