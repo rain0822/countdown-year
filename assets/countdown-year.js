@@ -273,24 +273,43 @@ define('countdown-year/controllers/application', ['exports'], function (exports)
         seconds: '32',
         ytVideos: [{
             id: 'Jv3zvWZlXkk',
-            title: '終於結束的起點',
-            emberYoutube: 'emberYoutube0'
+            title: '終於結束的起點'
         }, {
             id: 'pd3eV-SG23E',
-            title: '後來的我們',
-            emberYoutube: 'emberYoutube1'
+            title: '後來的我們'
         }, {
             id: '38lcQsEMGrk',
-            title: '我不願讓你一個人',
-            emberYoutube: 'emberYoutube2'
+            title: '我不願讓你一個人'
         }, {
             id: '_o0oeyCtoFA',
-            title: '知足',
-            emberYoutube: 'emberYoutube3'
+            title: '知足'
+        }, {
+            id: 'Y-0Ra3PvTWg',
+            title: '乾杯'
         }, {
             id: 'zBJjFEE0rUc',
-            title: '突然好想你',
-            emberYoutube: 'emberYoutube4'
+            title: '突然好想你'
+        }, {
+            id: 'znhb-_KgLoM',
+            title: '傷心的人別聽慢歌'
+        }, {
+            id: 'zdF9gOpFoIQ',
+            title: '派對動物'
+        }, {
+            id: 'jQE6biHTDow',
+            title: '離開地球表面'
+        }, {
+            id: 'hr8jWDyb1jg',
+            title: '你不是真正的快樂'
+        }, {
+            id: 'R2s-H_crYkc',
+            title: '倔強'
+        }, {
+            id: 'iSkRGgYSQfY',
+            title: '戀愛ing'
+        }, {
+            id: '5VUUGZ1-nlY',
+            title: '志明與春嬌'
         }],
         playerVars: {
             autoplay: 1,
@@ -1241,7 +1260,7 @@ define("countdown-year/templates/application", ["exports"], function (exports) {
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
-  exports.default = Ember.HTMLBars.template({ "id": "B/PbVj5q", "block": "{\"symbols\":[\"ytVideo\",\"currentModel\"],\"statements\":[[6,\"div\"],[9,\"class\",\"container\"],[7],[0,\"\\n\"],[4,\"sticky-element\",null,null,{\"statements\":[[4,\"liquid-bind\",[[20,[\"mainVideo\"]]],[[\"use\"],[\"scale\"]],{\"statements\":[[0,\"            \"],[6,\"div\"],[9,\"class\",\"card\"],[7],[0,\"\\n                \"],[6,\"div\"],[7],[0,\"\\n                    \"],[1,[25,\"ember-youtube\",null,[[\"ytid\",\"playerVars\",\"width\",\"delegate\",\"delegate-as\"],[[20,[\"mainVideo\",\"id\"]],[20,[\"playerVars\"]],\"100%\",[19,0,[]],\"emberYoutube\"]]],false],[0,\"\\n                \"],[8],[0,\"\\n                \"],[6,\"div\"],[9,\"class\",\"card-content\"],[7],[0,\"\\n                    \"],[6,\"div\"],[7],[1,[20,[\"mainVideo\",\"title\"]],false],[8],[0,\"\\n                \"],[8],[0,\"\\n                \"],[6,\"div\"],[9,\"class\",\"card-action\"],[7],[0,\"\\n                    \"],[6,\"button\"],[9,\"class\",\"btn-floating waves-effect waves-light\"],[3,\"action\",[[19,0,[]],\"togglePlay\"],[[\"target\"],[[20,[\"emberYoutube\"]]]]],[7],[0,\"\\n\"],[4,\"if\",[[20,[\"emberYoutube\",\"isPlaying\"]]],null,{\"statements\":[[0,\"                            \"],[6,\"i\"],[9,\"class\",\"material-icons\"],[7],[0,\"\"],[8],[0,\"\\n\"]],\"parameters\":[]},{\"statements\":[[0,\"                            \"],[6,\"i\"],[9,\"class\",\"material-icons\"],[7],[0,\"\"],[8],[0,\"\\n\"]],\"parameters\":[]}],[0,\"                    \"],[8],[0,\"\\n                    \"],[6,\"button\"],[9,\"class\",\"btn-floating waves-effect waves-light\"],[3,\"action\",[[19,0,[]],\"toggleVolume\"],[[\"target\"],[[20,[\"emberYoutube\"]]]]],[7],[0,\"\\n\"],[4,\"if\",[[20,[\"emberYoutube\",\"isMuted\"]]],null,{\"statements\":[[0,\"                            \"],[6,\"i\"],[9,\"class\",\"material-icons\"],[7],[0,\"\"],[8],[0,\"\\n\"]],\"parameters\":[]},{\"statements\":[[0,\"                            \"],[6,\"i\"],[9,\"class\",\"material-icons\"],[7],[0,\"\"],[8],[0,\"\\n\"]],\"parameters\":[]}],[0,\"                    \"],[8],[0,\"\\n                \"],[8],[0,\"\\n            \"],[8],[0,\"\\n\"]],\"parameters\":[2]},null]],\"parameters\":[]},null],[0,\"    \"],[6,\"div\"],[9,\"class\",\"row\"],[7],[0,\"\\n\"],[4,\"each\",[[20,[\"ytSubVideos\"]]],null,{\"statements\":[[0,\"            \"],[6,\"div\"],[9,\"class\",\"col s6 m4 l3\"],[7],[1,[25,\"cy-youtube\",null,[[\"ytVideo\"],[[19,1,[]]]]],false],[8],[0,\"\\n\"]],\"parameters\":[1]},null],[0,\"    \"],[8],[0,\"\\n    \"],[2,\"page1\"],[0,\"\\n    \"],[2,\"page2\"],[0,\"\\n    \"],[6,\"br\"],[7],[8],[0,\"\\n    \"],[1,[18,\"outlet\"],false],[0,\"\\n\"],[8],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "moduleName": "countdown-year/templates/application.hbs" } });
+  exports.default = Ember.HTMLBars.template({ "id": "VoA0doYH", "block": "{\"symbols\":[\"ytVideo\",\"currentModel\"],\"statements\":[[6,\"div\"],[9,\"class\",\"container\"],[7],[0,\"\\n\"],[4,\"sticky-element\",null,null,{\"statements\":[[4,\"liquid-bind\",[[20,[\"mainVideo\"]]],[[\"use\"],[\"scale\"]],{\"statements\":[[0,\"            \"],[6,\"div\"],[9,\"class\",\"card\"],[9,\"style\",\"margin: 0px;\"],[7],[0,\"\\n                \"],[6,\"div\"],[7],[0,\"\\n                    \"],[1,[25,\"ember-youtube\",null,[[\"ytid\",\"playerVars\",\"width\",\"height\",\"delegate\",\"delegate-as\"],[[20,[\"mainVideo\",\"id\"]],[20,[\"playerVars\"]],\"100%\",\"100%\",[19,0,[]],\"emberYoutube\"]]],false],[0,\"\\n                \"],[8],[0,\"\\n                \"],[6,\"div\"],[9,\"class\",\"card-content\"],[7],[0,\"\\n                    \"],[6,\"button\"],[9,\"class\",\"btn-floating waves-effect waves-light\"],[3,\"action\",[[19,0,[]],\"togglePlay\"],[[\"target\"],[[20,[\"emberYoutube\"]]]]],[7],[0,\"\\n\"],[4,\"if\",[[20,[\"emberYoutube\",\"isPlaying\"]]],null,{\"statements\":[[0,\"                            \"],[6,\"i\"],[9,\"class\",\"material-icons\"],[7],[0,\"\"],[8],[0,\"\\n\"]],\"parameters\":[]},{\"statements\":[[0,\"                            \"],[6,\"i\"],[9,\"class\",\"material-icons\"],[7],[0,\"\"],[8],[0,\"\\n\"]],\"parameters\":[]}],[0,\"                    \"],[8],[0,\"\\n                    \"],[6,\"button\"],[9,\"class\",\"btn-floating waves-effect waves-light\"],[3,\"action\",[[19,0,[]],\"toggleVolume\"],[[\"target\"],[[20,[\"emberYoutube\"]]]]],[7],[0,\"\\n\"],[4,\"if\",[[20,[\"emberYoutube\",\"isMuted\"]]],null,{\"statements\":[[0,\"                            \"],[6,\"i\"],[9,\"class\",\"material-icons\"],[7],[0,\"\"],[8],[0,\"\\n\"]],\"parameters\":[]},{\"statements\":[[0,\"                            \"],[6,\"i\"],[9,\"class\",\"material-icons\"],[7],[0,\"\"],[8],[0,\"\\n\"]],\"parameters\":[]}],[0,\"                    \"],[8],[0,\"\\n                    \"],[6,\"div\"],[9,\"class\",\"right\"],[7],[1,[20,[\"mainVideo\",\"title\"]],false],[8],[0,\"\\n                \"],[8],[0,\"\\n            \"],[8],[0,\"\\n\"]],\"parameters\":[2]},null]],\"parameters\":[]},null],[0,\"    \"],[6,\"div\"],[9,\"class\",\"row\"],[7],[0,\"\\n\"],[4,\"each\",[[20,[\"ytSubVideos\"]]],null,{\"statements\":[[0,\"            \"],[6,\"div\"],[9,\"class\",\"col s6 m4 l3\"],[7],[1,[25,\"cy-youtube\",null,[[\"ytVideo\"],[[19,1,[]]]]],false],[8],[0,\"\\n\"]],\"parameters\":[1]},null],[0,\"    \"],[8],[0,\"\\n    \"],[2,\"page1\"],[0,\"\\n    \"],[2,\"page2\"],[0,\"\\n    \"],[6,\"br\"],[7],[8],[0,\"\\n    \"],[1,[18,\"outlet\"],false],[0,\"\\n\"],[8],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "moduleName": "countdown-year/templates/application.hbs" } });
 });
 define("countdown-year/templates/components/cy-youtube", ["exports"], function (exports) {
   "use strict";
@@ -1496,6 +1515,6 @@ catch(err) {
 });
 
 if (!runningTests) {
-  require("countdown-year/app")["default"].create({"name":"countdown-year","version":"0.0.0+0cae6d49"});
+  require("countdown-year/app")["default"].create({"name":"countdown-year","version":"0.0.0+9c7e512c"});
 }
 //# sourceMappingURL=countdown-year.map
