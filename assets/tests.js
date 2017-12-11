@@ -10,6 +10,11 @@ define('countdown-year/tests/app.lint-test', [], function () {
     assert.ok(true, 'app.js should pass ESLint\n\n');
   });
 
+  QUnit.test('components/cy-youtube.js', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'components/cy-youtube.js should pass ESLint\n\n');
+  });
+
   QUnit.test('controllers/application.js', function (assert) {
     assert.expect(1);
     assert.ok(true, 'controllers/application.js should pass ESLint\n\n');
@@ -25,6 +30,11 @@ define('countdown-year/tests/app.lint-test', [], function () {
     assert.ok(true, 'router.js should pass ESLint\n\n');
   });
 
+  QUnit.test('routes/application.js', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'routes/application.js should pass ESLint\n\n');
+  });
+
   QUnit.test('routes/page1.js', function (assert) {
     assert.expect(1);
     assert.ok(true, 'routes/page1.js should pass ESLint\n\n');
@@ -33,6 +43,11 @@ define('countdown-year/tests/app.lint-test', [], function () {
   QUnit.test('routes/page2.js', function (assert) {
     assert.expect(1);
     assert.ok(true, 'routes/page2.js should pass ESLint\n\n');
+  });
+
+  QUnit.test('transitions.js', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'transitions.js should pass ESLint\n\n');
   });
 });
 define('countdown-year/tests/helpers/destroy-app', ['exports'], function (exports) {

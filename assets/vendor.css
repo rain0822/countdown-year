@@ -1,3 +1,7 @@
+.sticky-element__trigger--bottom {
+    position: absolute;
+    bottom: 0;
+}
 #ember-welcome-page-id-selector {
   padding: 2em;
   box-shadow: 0 0 0px 10px #FFFBF5;
@@ -94,4 +98,21 @@
     float: none;
     margin: auto;
   }
+}
+
+.liquid-container {
+    position: relative;
+    overflow: hidden;
+
+    /* without this, overflow:hidden won't take effect because the things
+       we're trying to hide are on a separate accelerated
+       context. Also, this prevents a tiny vertical jump when the
+       content switches to accelerated.  */
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+}
+
+.liquid-child {
+    overflow: hidden; /* Prevent margin collapse */
 }

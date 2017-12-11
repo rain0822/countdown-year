@@ -21,6 +21,41 @@ define('countdown-year/app', ['exports', 'countdown-year/resolver', 'ember-load-
 
   exports.default = App;
 });
+define("countdown-year/components/-lf-get-outlet-state", ["exports", "liquid-fire/components/-lf-get-outlet-state"], function (exports, _lfGetOutletState) {
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, "default", {
+    enumerable: true,
+    get: function () {
+      return _lfGetOutletState.default;
+    }
+  });
+});
+define('countdown-year/components/cy-youtube', ['exports'], function (exports) {
+    'use strict';
+
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    var Component = Ember.Component;
+    exports.default = Component.extend({
+        test: true,
+        playerVars: {
+            autoplay: 1,
+            showinfo: 0,
+            controls: 0,
+            modestbranding: 1
+        },
+        actions: {
+            test: function test() {
+                this.set('test', !this.get('test'));
+            }
+        }
+    });
+});
 define('countdown-year/components/ember-youtube', ['exports', 'ember-youtube/components/ember-youtube'], function (exports, _emberYoutube) {
   'use strict';
 
@@ -28,6 +63,189 @@ define('countdown-year/components/ember-youtube', ['exports', 'ember-youtube/com
     value: true
   });
   exports.default = _emberYoutube.default;
+});
+define("countdown-year/components/illiquid-model", ["exports", "liquid-fire/components/illiquid-model"], function (exports, _illiquidModel) {
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, "default", {
+    enumerable: true,
+    get: function () {
+      return _illiquidModel.default;
+    }
+  });
+});
+define("countdown-year/components/liquid-bind", ["exports", "liquid-fire/components/liquid-bind"], function (exports, _liquidBind) {
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, "default", {
+    enumerable: true,
+    get: function () {
+      return _liquidBind.default;
+    }
+  });
+});
+define("countdown-year/components/liquid-child", ["exports", "liquid-fire/components/liquid-child"], function (exports, _liquidChild) {
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, "default", {
+    enumerable: true,
+    get: function () {
+      return _liquidChild.default;
+    }
+  });
+});
+define("countdown-year/components/liquid-container", ["exports", "liquid-fire/components/liquid-container"], function (exports, _liquidContainer) {
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, "default", {
+    enumerable: true,
+    get: function () {
+      return _liquidContainer.default;
+    }
+  });
+});
+define("countdown-year/components/liquid-if", ["exports", "liquid-fire/components/liquid-if"], function (exports, _liquidIf) {
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, "default", {
+    enumerable: true,
+    get: function () {
+      return _liquidIf.default;
+    }
+  });
+});
+define("countdown-year/components/liquid-measured", ["exports", "liquid-fire/components/liquid-measured"], function (exports, _liquidMeasured) {
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, "default", {
+    enumerable: true,
+    get: function () {
+      return _liquidMeasured.default;
+    }
+  });
+  Object.defineProperty(exports, "measure", {
+    enumerable: true,
+    get: function () {
+      return _liquidMeasured.measure;
+    }
+  });
+});
+define("countdown-year/components/liquid-outlet", ["exports", "liquid-fire/components/liquid-outlet"], function (exports, _liquidOutlet) {
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, "default", {
+    enumerable: true,
+    get: function () {
+      return _liquidOutlet.default;
+    }
+  });
+});
+define("countdown-year/components/liquid-spacer", ["exports", "liquid-fire/components/liquid-spacer"], function (exports, _liquidSpacer) {
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, "default", {
+    enumerable: true,
+    get: function () {
+      return _liquidSpacer.default;
+    }
+  });
+});
+define('countdown-year/components/liquid-sync', ['exports', 'liquid-fire/components/liquid-sync'], function (exports, _liquidSync) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _liquidSync.default;
+    }
+  });
+});
+define("countdown-year/components/liquid-unless", ["exports", "liquid-fire/components/liquid-unless"], function (exports, _liquidUnless) {
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, "default", {
+    enumerable: true,
+    get: function () {
+      return _liquidUnless.default;
+    }
+  });
+});
+define("countdown-year/components/liquid-versions", ["exports", "liquid-fire/components/liquid-versions"], function (exports, _liquidVersions) {
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, "default", {
+    enumerable: true,
+    get: function () {
+      return _liquidVersions.default;
+    }
+  });
+});
+define('countdown-year/components/sticky-container', ['exports', 'ember-cli-sticky/components/sticky-container'], function (exports, _stickyContainer) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = _stickyContainer.default;
+});
+define('countdown-year/components/sticky-element', ['exports', 'ember-sticky-element/components/sticky-element'], function (exports, _stickyElement) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _stickyElement.default;
+    }
+  });
+});
+define('countdown-year/components/sticky-element/trigger', ['exports', 'ember-sticky-element/components/sticky-element/trigger'], function (exports, _trigger) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _trigger.default;
+    }
+  });
 });
 define('countdown-year/components/welcome-page', ['exports', 'ember-welcome-page/components/welcome-page'], function (exports, _welcomePage) {
   'use strict';
@@ -50,6 +268,9 @@ define('countdown-year/controllers/application', ['exports'], function (exports)
     });
     var Controller = Ember.Controller;
     exports.default = Controller.extend({
+        hours: '32',
+        minutes: '31',
+        seconds: '32',
         ytVideos: [{
             id: 'Jv3zvWZlXkk',
             title: '終於結束的起點',
@@ -74,11 +295,6 @@ define('countdown-year/controllers/application', ['exports'], function (exports)
         playerVars: {
             autoplay: 1,
             showinfo: 0,
-            modestbranding: 1
-        },
-        subPlayerVars: {
-            autoplay: 1,
-            showinfo: 0,
             controls: 0,
             modestbranding: 1
         },
@@ -87,15 +303,6 @@ define('countdown-year/controllers/application', ['exports'], function (exports)
             var mainVideo = this.get('ytSubVideos').objectAt(0);
             this.set('mainVideo', mainVideo);
             this.get('ytSubVideos').removeObject(mainVideo);
-        },
-
-        actions: {
-            adjust: function adjust(video) {
-                var oldVideo = this.get('mainVideo');
-                this.set('mainVideo', video);
-                this.get('ytSubVideos').removeObject(video);
-                this.get('ytSubVideos').addObject(oldVideo);
-            }
         }
     });
 });
@@ -199,6 +406,19 @@ define('countdown-year/helpers/gte', ['exports', 'ember-truth-helpers/helpers/gt
     }
   });
 });
+define('countdown-year/helpers/is-after', ['exports', 'ember-moment/helpers/is-after'], function (exports, _isAfter) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _isAfter.default;
+    }
+  });
+});
 define('countdown-year/helpers/is-array', ['exports', 'ember-truth-helpers/helpers/is-array'], function (exports, _isArray) {
   'use strict';
 
@@ -218,6 +438,32 @@ define('countdown-year/helpers/is-array', ['exports', 'ember-truth-helpers/helpe
     }
   });
 });
+define('countdown-year/helpers/is-before', ['exports', 'ember-moment/helpers/is-before'], function (exports, _isBefore) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _isBefore.default;
+    }
+  });
+});
+define('countdown-year/helpers/is-between', ['exports', 'ember-moment/helpers/is-between'], function (exports, _isBetween) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _isBetween.default;
+    }
+  });
+});
 define('countdown-year/helpers/is-equal', ['exports', 'ember-truth-helpers/helpers/is-equal'], function (exports, _isEqual) {
   'use strict';
 
@@ -234,6 +480,83 @@ define('countdown-year/helpers/is-equal', ['exports', 'ember-truth-helpers/helpe
     enumerable: true,
     get: function () {
       return _isEqual.isEqual;
+    }
+  });
+});
+define('countdown-year/helpers/is-same-or-after', ['exports', 'ember-moment/helpers/is-same-or-after'], function (exports, _isSameOrAfter) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _isSameOrAfter.default;
+    }
+  });
+});
+define('countdown-year/helpers/is-same-or-before', ['exports', 'ember-moment/helpers/is-same-or-before'], function (exports, _isSameOrBefore) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _isSameOrBefore.default;
+    }
+  });
+});
+define('countdown-year/helpers/is-same', ['exports', 'ember-moment/helpers/is-same'], function (exports, _isSame) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _isSame.default;
+    }
+  });
+});
+define('countdown-year/helpers/lf-lock-model', ['exports', 'liquid-fire/helpers/lf-lock-model'], function (exports, _lfLockModel) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _lfLockModel.default;
+    }
+  });
+  Object.defineProperty(exports, 'lfLockModel', {
+    enumerable: true,
+    get: function () {
+      return _lfLockModel.lfLockModel;
+    }
+  });
+});
+define('countdown-year/helpers/lf-or', ['exports', 'liquid-fire/helpers/lf-or'], function (exports, _lfOr) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _lfOr.default;
+    }
+  });
+  Object.defineProperty(exports, 'lfOr', {
+    enumerable: true,
+    get: function () {
+      return _lfOr.lfOr;
     }
   });
 });
@@ -275,6 +598,181 @@ define('countdown-year/helpers/lte', ['exports', 'ember-truth-helpers/helpers/lt
     }
   });
 });
+define('countdown-year/helpers/moment-add', ['exports', 'ember-moment/helpers/moment-add'], function (exports, _momentAdd) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _momentAdd.default;
+    }
+  });
+});
+define('countdown-year/helpers/moment-calendar', ['exports', 'ember-moment/helpers/moment-calendar'], function (exports, _momentCalendar) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _momentCalendar.default;
+    }
+  });
+});
+define('countdown-year/helpers/moment-diff', ['exports', 'ember-moment/helpers/moment-diff'], function (exports, _momentDiff) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _momentDiff.default;
+    }
+  });
+});
+define('countdown-year/helpers/moment-duration', ['exports', 'ember-moment/helpers/moment-duration'], function (exports, _momentDuration) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _momentDuration.default;
+    }
+  });
+});
+define('countdown-year/helpers/moment-format', ['exports', 'ember-moment/helpers/moment-format'], function (exports, _momentFormat) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _momentFormat.default;
+    }
+  });
+});
+define('countdown-year/helpers/moment-from-now', ['exports', 'ember-moment/helpers/moment-from-now'], function (exports, _momentFromNow) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _momentFromNow.default;
+    }
+  });
+});
+define('countdown-year/helpers/moment-from', ['exports', 'ember-moment/helpers/moment-from'], function (exports, _momentFrom) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _momentFrom.default;
+    }
+  });
+});
+define('countdown-year/helpers/moment-subtract', ['exports', 'ember-moment/helpers/moment-subtract'], function (exports, _momentSubtract) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _momentSubtract.default;
+    }
+  });
+});
+define('countdown-year/helpers/moment-to-date', ['exports', 'ember-moment/helpers/moment-to-date'], function (exports, _momentToDate) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _momentToDate.default;
+    }
+  });
+});
+define('countdown-year/helpers/moment-to-now', ['exports', 'ember-moment/helpers/moment-to-now'], function (exports, _momentToNow) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _momentToNow.default;
+    }
+  });
+});
+define('countdown-year/helpers/moment-to', ['exports', 'ember-moment/helpers/moment-to'], function (exports, _momentTo) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _momentTo.default;
+    }
+  });
+});
+define('countdown-year/helpers/moment-unix', ['exports', 'ember-moment/helpers/unix'], function (exports, _unix) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _unix.default;
+    }
+  });
+  Object.defineProperty(exports, 'unix', {
+    enumerable: true,
+    get: function () {
+      return _unix.unix;
+    }
+  });
+});
+define('countdown-year/helpers/moment', ['exports', 'ember-moment/helpers/moment'], function (exports, _moment) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _moment.default;
+    }
+  });
+});
 define('countdown-year/helpers/not-eq', ['exports', 'ember-truth-helpers/helpers/not-equal'], function (exports, _notEqual) {
   'use strict';
 
@@ -313,6 +811,19 @@ define('countdown-year/helpers/not', ['exports', 'ember-truth-helpers/helpers/no
     }
   });
 });
+define('countdown-year/helpers/now', ['exports', 'ember-moment/helpers/now'], function (exports, _now) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _now.default;
+    }
+  });
+});
 define('countdown-year/helpers/or', ['exports', 'ember-truth-helpers/helpers/or'], function (exports, _or) {
   'use strict';
 
@@ -340,6 +851,19 @@ define('countdown-year/helpers/pluralize', ['exports', 'ember-inflector/lib/help
   });
   exports.default = _pluralize.default;
 });
+define('countdown-year/helpers/route-action', ['exports', 'ember-route-action-helper/helpers/route-action'], function (exports, _routeAction) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _routeAction.default;
+    }
+  });
+});
 define('countdown-year/helpers/singularize', ['exports', 'ember-inflector/lib/helpers/singularize'], function (exports, _singularize) {
   'use strict';
 
@@ -347,6 +871,25 @@ define('countdown-year/helpers/singularize', ['exports', 'ember-inflector/lib/he
     value: true
   });
   exports.default = _singularize.default;
+});
+define('countdown-year/helpers/unix', ['exports', 'ember-moment/helpers/unix'], function (exports, _unix) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _unix.default;
+    }
+  });
+  Object.defineProperty(exports, 'unix', {
+    enumerable: true,
+    get: function () {
+      return _unix.unix;
+    }
+  });
 });
 define('countdown-year/helpers/xor', ['exports', 'ember-truth-helpers/helpers/xor'], function (exports, _xor) {
   'use strict';
@@ -489,6 +1032,21 @@ define('countdown-year/initializers/injectStore', ['exports'], function (exports
     initialize: function initialize() {}
   };
 });
+define("countdown-year/initializers/liquid-fire", ["exports", "liquid-fire/ember-internals", "liquid-fire/velocity-ext"], function (exports, _emberInternals) {
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+
+  (0, _emberInternals.initialize)();
+
+  exports.default = {
+    name: 'liquid-fire',
+    initialize: function initialize() {}
+  };
+});
 define('countdown-year/initializers/store', ['exports'], function (exports) {
   'use strict';
 
@@ -511,6 +1069,53 @@ define('countdown-year/initializers/transforms', ['exports'], function (exports)
     name: 'transforms',
     before: 'store',
     initialize: function initialize() {}
+  };
+});
+define('countdown-year/initializers/viewport-config', ['exports', 'countdown-year/config/environment', 'ember-in-viewport/utils/can-use-dom'], function (exports, _environment, _canUseDom) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.initialize = initialize;
+
+
+  var defaultConfig = {
+    viewportEnabled: true,
+    viewportSpy: false,
+    viewportScrollSensitivity: 1,
+    viewportRefreshRate: 100,
+    viewportListeners: [{ context: window, event: 'scroll.scrollable' }, { context: window, event: 'resize.resizable' }],
+    viewportTolerance: {
+      top: 0,
+      left: 0,
+      bottom: 0,
+      right: 0
+    }
+  };
+
+  if (_canUseDom.default) {
+    defaultConfig.viewportListeners.push({
+      context: document,
+      event: 'touchmove.scrollable'
+    });
+  }
+
+  var assign = Ember.assign || Ember.merge;
+
+  function initialize() {
+    var application = arguments[1] || arguments[0];
+    var _config$viewportConfi = _environment.default.viewportConfig,
+        viewportConfig = _config$viewportConfi === undefined ? {} : _config$viewportConfi;
+
+    var mergedConfig = assign({}, defaultConfig, viewportConfig);
+
+    application.register('config:in-viewport', mergedConfig, { instantiate: false });
+  }
+
+  exports.default = {
+    name: 'viewport-config',
+    initialize: initialize
   };
 });
 define("countdown-year/instance-initializers/ember-data", ["exports", "ember-data/instance-initializers/initialize-store-service"], function (exports, _initializeStoreService) {
@@ -553,6 +1158,25 @@ define('countdown-year/router', ['exports', 'countdown-year/config/environment']
 
   exports.default = Router;
 });
+define('countdown-year/routes/application', ['exports'], function (exports) {
+    'use strict';
+
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    var Route = Ember.Route;
+    exports.default = Route.extend({
+        actions: {
+            adjust: function adjust(video) {
+                var oldVideo = this.controller.get('mainVideo');
+                this.controller.set('mainVideo', video);
+                this.controller.get('ytSubVideos').removeObject(video);
+                this.controller.get('ytSubVideos').addObject(oldVideo);
+                this.controller.set('hours', '21');
+            }
+        }
+    });
+});
 define('countdown-year/routes/page1', ['exports'], function (exports) {
   'use strict';
 
@@ -584,13 +1208,48 @@ define('countdown-year/services/ajax', ['exports', 'ember-ajax/services/ajax'], 
     }
   });
 });
+define('countdown-year/services/cookies', ['exports', 'ember-cookies/services/cookies'], function (exports, _cookies) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = _cookies.default;
+});
+define("countdown-year/services/liquid-fire-transitions", ["exports", "liquid-fire/transition-map"], function (exports, _transitionMap) {
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = _transitionMap.default;
+});
+define('countdown-year/services/moment', ['exports', 'ember-moment/services/moment', 'countdown-year/config/environment'], function (exports, _moment, _environment) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  var get = Ember.get;
+  exports.default = _moment.default.extend({
+    defaultFormat: get(_environment.default, 'moment.outputFormat')
+  });
+});
 define("countdown-year/templates/application", ["exports"], function (exports) {
   "use strict";
 
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
-  exports.default = Ember.HTMLBars.template({ "id": "PEH50oIP", "block": "{\"symbols\":[\"ytVideo\"],\"statements\":[[6,\"div\"],[9,\"class\",\"container\"],[7],[0,\"\\n    \"],[6,\"br\"],[7],[8],[0,\"\\n    \"],[6,\"h4\"],[9,\"class\",\"center\"],[7],[1,[20,[\"mainVideo\",\"title\"]],false],[8],[0,\"\\n    \"],[1,[25,\"ember-youtube\",null,[[\"ytid\",\"playerVars\",\"width\",\"delegate\",\"delegate-as\"],[[20,[\"mainVideo\",\"id\"]],[20,[\"playerVars\"]],\"100%\",[19,0,[]],\"emberYoutube\"]]],false],[0,\"\\n\\n    \"],[6,\"button\"],[9,\"class\",\"btn-floating waves-effect waves-light\"],[3,\"action\",[[19,0,[]],\"togglePlay\"],[[\"target\"],[[20,[\"emberYoutube\"]]]]],[7],[0,\"\\n\"],[4,\"if\",[[20,[\"emberYoutube\",\"isPlaying\"]]],null,{\"statements\":[[0,\"            \"],[6,\"i\"],[9,\"class\",\"material-icons\"],[7],[0,\"\"],[8],[0,\"\\n\"]],\"parameters\":[]},{\"statements\":[[0,\"            \"],[6,\"i\"],[9,\"class\",\"material-icons\"],[7],[0,\"\"],[8],[0,\"\\n\"]],\"parameters\":[]}],[0,\"    \"],[8],[0,\"\\n    \"],[6,\"button\"],[9,\"class\",\"btn-floating waves-effect waves-light\"],[3,\"action\",[[19,0,[]],\"toggleVolume\"],[[\"target\"],[[20,[\"emberYoutube\"]]]]],[7],[0,\"\\n\"],[4,\"if\",[[20,[\"emberYoutube\",\"isMuted\"]]],null,{\"statements\":[[0,\"            \"],[6,\"i\"],[9,\"class\",\"material-icons\"],[7],[0,\"\"],[8],[0,\"\\n\"]],\"parameters\":[]},{\"statements\":[[0,\"            \"],[6,\"i\"],[9,\"class\",\"material-icons\"],[7],[0,\"\"],[8],[0,\"\\n\"]],\"parameters\":[]}],[0,\"    \"],[8],[0,\"\\n\\n    \"],[6,\"hr\"],[7],[8],[0,\"\\n    \"],[6,\"div\"],[9,\"class\",\"row\"],[7],[0,\"\\n\"],[4,\"each\",[[20,[\"ytSubVideos\"]]],null,{\"statements\":[[0,\"            \"],[6,\"div\"],[9,\"class\",\"col s6 m4 l3\"],[7],[0,\"\\n                \"],[6,\"button\"],[9,\"class\",\"btn-floating waves-effect waves-write\"],[3,\"action\",[[19,0,[]],\"adjust\",[19,1,[]]]],[7],[0,\"\\n                    \"],[6,\"i\"],[9,\"class\",\"small material-icons\"],[7],[0,\"arrow_upward\"],[8],[0,\"\\n                \"],[8],[0,\"\\n                \"],[6,\"small\"],[7],[1,[19,1,[\"title\"]],false],[8],[0,\"\\n                \"],[1,[25,\"ember-youtube\",null,[[\"ytid\",\"playerVars\",\"width\",\"height\",\"delegate\",\"delegate-as\"],[[19,1,[\"id\"]],[20,[\"subPlayerVars\"]],\"100%\",\"100%\",[19,0,[]],[19,1,[\"emberYoutube\"]]]]],false],[0,\"\\n\\n\"],[4,\"if\",[[25,\"eq\",[[19,1,[\"id\"]],\"Jv3zvWZlXkk\"],null]],null,{\"statements\":[[0,\"                    \"],[6,\"button\"],[9,\"class\",\"btn-floating waves-effect waves-light\"],[3,\"action\",[[19,0,[]],\"togglePlay\"],[[\"target\"],[[20,[\"emberYoutube0\"]]]]],[7],[0,\"\\n                        \"],[4,\"if\",[[20,[\"emberYoutube0\",\"isPlaying\"]]],null,{\"statements\":[[6,\"i\"],[9,\"class\",\"material-icons\"],[7],[0,\"\"],[8]],\"parameters\":[]},{\"statements\":[[6,\"i\"],[9,\"class\",\"material-icons\"],[7],[0,\"\"],[8]],\"parameters\":[]}],[0,\"\\n                    \"],[8],[0,\"\\n                    \"],[6,\"button\"],[9,\"class\",\"btn-floating waves-effect waves-light\"],[3,\"action\",[[19,0,[]],\"toggleVolume\"],[[\"target\"],[[20,[\"emberYoutube0\"]]]]],[7],[0,\"\\n                        \"],[4,\"if\",[[20,[\"emberYoutube0\",\"isMuted\"]]],null,{\"statements\":[[6,\"i\"],[9,\"class\",\"material-icons\"],[7],[0,\"\"],[8]],\"parameters\":[]},{\"statements\":[[6,\"i\"],[9,\"class\",\"material-icons\"],[7],[0,\"\"],[8]],\"parameters\":[]}],[0,\"\\n                    \"],[8],[0,\"\\n\"]],\"parameters\":[]},null],[4,\"if\",[[25,\"eq\",[[19,1,[\"id\"]],\"pd3eV-SG23E\"],null]],null,{\"statements\":[[0,\"                    \"],[6,\"button\"],[9,\"class\",\"btn-floating waves-effect waves-light\"],[3,\"action\",[[19,0,[]],\"togglePlay\"],[[\"target\"],[[20,[\"emberYoutube1\"]]]]],[7],[0,\"\\n                        \"],[4,\"if\",[[20,[\"emberYoutube1\",\"isPlaying\"]]],null,{\"statements\":[[6,\"i\"],[9,\"class\",\"material-icons\"],[7],[0,\"\"],[8]],\"parameters\":[]},{\"statements\":[[6,\"i\"],[9,\"class\",\"material-icons\"],[7],[0,\"\"],[8]],\"parameters\":[]}],[0,\"\\n                    \"],[8],[0,\"\\n                    \"],[6,\"button\"],[9,\"class\",\"btn-floating waves-effect waves-light\"],[3,\"action\",[[19,0,[]],\"toggleVolume\"],[[\"target\"],[[20,[\"emberYoutube1\"]]]]],[7],[0,\"\\n                        \"],[4,\"if\",[[20,[\"emberYoutube1\",\"isMuted\"]]],null,{\"statements\":[[6,\"i\"],[9,\"class\",\"material-icons\"],[7],[0,\"\"],[8]],\"parameters\":[]},{\"statements\":[[6,\"i\"],[9,\"class\",\"material-icons\"],[7],[0,\"\"],[8]],\"parameters\":[]}],[0,\"\\n                    \"],[8],[0,\"\\n\"]],\"parameters\":[]},null],[4,\"if\",[[25,\"eq\",[[19,1,[\"id\"]],\"38lcQsEMGrk\"],null]],null,{\"statements\":[[0,\"                    \"],[6,\"button\"],[9,\"class\",\"btn-floating waves-effect waves-light\"],[3,\"action\",[[19,0,[]],\"togglePlay\"],[[\"target\"],[[20,[\"emberYoutube2\"]]]]],[7],[0,\"\\n                        \"],[4,\"if\",[[20,[\"emberYoutube2\",\"isPlaying\"]]],null,{\"statements\":[[6,\"i\"],[9,\"class\",\"material-icons\"],[7],[0,\"\"],[8]],\"parameters\":[]},{\"statements\":[[6,\"i\"],[9,\"class\",\"material-icons\"],[7],[0,\"\"],[8]],\"parameters\":[]}],[0,\"\\n                    \"],[8],[0,\"\\n                    \"],[6,\"button\"],[9,\"class\",\"btn-floating waves-effect waves-light\"],[3,\"action\",[[19,0,[]],\"toggleVolume\"],[[\"target\"],[[20,[\"emberYoutube2\"]]]]],[7],[0,\"\\n                        \"],[4,\"if\",[[20,[\"emberYoutube2\",\"isMuted\"]]],null,{\"statements\":[[6,\"i\"],[9,\"class\",\"material-icons\"],[7],[0,\"\"],[8]],\"parameters\":[]},{\"statements\":[[6,\"i\"],[9,\"class\",\"material-icons\"],[7],[0,\"\"],[8]],\"parameters\":[]}],[0,\"\\n                    \"],[8],[0,\"\\n\"]],\"parameters\":[]},null],[4,\"if\",[[25,\"eq\",[[19,1,[\"id\"]],\"_o0oeyCtoFA\"],null]],null,{\"statements\":[[0,\"                    \"],[6,\"button\"],[9,\"class\",\"btn-floating waves-effect waves-light\"],[3,\"action\",[[19,0,[]],\"togglePlay\"],[[\"target\"],[[20,[\"emberYoutube3\"]]]]],[7],[0,\"\\n                        \"],[4,\"if\",[[20,[\"emberYoutube3\",\"isPlaying\"]]],null,{\"statements\":[[6,\"i\"],[9,\"class\",\"material-icons\"],[7],[0,\"\"],[8]],\"parameters\":[]},{\"statements\":[[6,\"i\"],[9,\"class\",\"material-icons\"],[7],[0,\"\"],[8]],\"parameters\":[]}],[0,\"\\n                    \"],[8],[0,\"\\n                    \"],[6,\"button\"],[9,\"class\",\"btn-floating waves-effect waves-light\"],[3,\"action\",[[19,0,[]],\"toggleVolume\"],[[\"target\"],[[20,[\"emberYoutube3\"]]]]],[7],[0,\"\\n                        \"],[4,\"if\",[[20,[\"emberYoutube3\",\"isMuted\"]]],null,{\"statements\":[[6,\"i\"],[9,\"class\",\"material-icons\"],[7],[0,\"\"],[8]],\"parameters\":[]},{\"statements\":[[6,\"i\"],[9,\"class\",\"material-icons\"],[7],[0,\"\"],[8]],\"parameters\":[]}],[0,\"\\n                    \"],[8],[0,\"\\n\"]],\"parameters\":[]},null],[4,\"if\",[[25,\"eq\",[[19,1,[\"id\"]],\"zBJjFEE0rUc\"],null]],null,{\"statements\":[[0,\"                    \"],[6,\"button\"],[9,\"class\",\"btn-floating waves-effect waves-light\"],[3,\"action\",[[19,0,[]],\"togglePlay\"],[[\"target\"],[[20,[\"emberYoutube4\"]]]]],[7],[0,\"\\n                        \"],[4,\"if\",[[20,[\"emberYoutube4\",\"isPlaying\"]]],null,{\"statements\":[[6,\"i\"],[9,\"class\",\"material-icons\"],[7],[0,\"\"],[8]],\"parameters\":[]},{\"statements\":[[6,\"i\"],[9,\"class\",\"material-icons\"],[7],[0,\"\"],[8]],\"parameters\":[]}],[0,\"\\n                    \"],[8],[0,\"\\n                    \"],[6,\"button\"],[9,\"class\",\"btn-floating waves-effect waves-light\"],[3,\"action\",[[19,0,[]],\"toggleVolume\"],[[\"target\"],[[20,[\"emberYoutube4\"]]]]],[7],[0,\"\\n                        \"],[4,\"if\",[[20,[\"emberYoutube4\",\"isMuted\"]]],null,{\"statements\":[[6,\"i\"],[9,\"class\",\"material-icons\"],[7],[0,\"\"],[8]],\"parameters\":[]},{\"statements\":[[6,\"i\"],[9,\"class\",\"material-icons\"],[7],[0,\"\"],[8]],\"parameters\":[]}],[0,\"\\n                    \"],[8],[0,\"\\n\"]],\"parameters\":[]},null],[0,\"            \"],[8],[0,\"\\n\"]],\"parameters\":[1]},null],[0,\"    \"],[8],[0,\"\\n    \"],[2,\"page1\"],[0,\"\\n    \"],[2,\"page2\"],[0,\"\\n    \"],[6,\"br\"],[7],[8],[0,\"\\n    \"],[1,[18,\"outlet\"],false],[0,\"\\n\"],[8],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "moduleName": "countdown-year/templates/application.hbs" } });
+  exports.default = Ember.HTMLBars.template({ "id": "B/PbVj5q", "block": "{\"symbols\":[\"ytVideo\",\"currentModel\"],\"statements\":[[6,\"div\"],[9,\"class\",\"container\"],[7],[0,\"\\n\"],[4,\"sticky-element\",null,null,{\"statements\":[[4,\"liquid-bind\",[[20,[\"mainVideo\"]]],[[\"use\"],[\"scale\"]],{\"statements\":[[0,\"            \"],[6,\"div\"],[9,\"class\",\"card\"],[7],[0,\"\\n                \"],[6,\"div\"],[7],[0,\"\\n                    \"],[1,[25,\"ember-youtube\",null,[[\"ytid\",\"playerVars\",\"width\",\"delegate\",\"delegate-as\"],[[20,[\"mainVideo\",\"id\"]],[20,[\"playerVars\"]],\"100%\",[19,0,[]],\"emberYoutube\"]]],false],[0,\"\\n                \"],[8],[0,\"\\n                \"],[6,\"div\"],[9,\"class\",\"card-content\"],[7],[0,\"\\n                    \"],[6,\"div\"],[7],[1,[20,[\"mainVideo\",\"title\"]],false],[8],[0,\"\\n                \"],[8],[0,\"\\n                \"],[6,\"div\"],[9,\"class\",\"card-action\"],[7],[0,\"\\n                    \"],[6,\"button\"],[9,\"class\",\"btn-floating waves-effect waves-light\"],[3,\"action\",[[19,0,[]],\"togglePlay\"],[[\"target\"],[[20,[\"emberYoutube\"]]]]],[7],[0,\"\\n\"],[4,\"if\",[[20,[\"emberYoutube\",\"isPlaying\"]]],null,{\"statements\":[[0,\"                            \"],[6,\"i\"],[9,\"class\",\"material-icons\"],[7],[0,\"\"],[8],[0,\"\\n\"]],\"parameters\":[]},{\"statements\":[[0,\"                            \"],[6,\"i\"],[9,\"class\",\"material-icons\"],[7],[0,\"\"],[8],[0,\"\\n\"]],\"parameters\":[]}],[0,\"                    \"],[8],[0,\"\\n                    \"],[6,\"button\"],[9,\"class\",\"btn-floating waves-effect waves-light\"],[3,\"action\",[[19,0,[]],\"toggleVolume\"],[[\"target\"],[[20,[\"emberYoutube\"]]]]],[7],[0,\"\\n\"],[4,\"if\",[[20,[\"emberYoutube\",\"isMuted\"]]],null,{\"statements\":[[0,\"                            \"],[6,\"i\"],[9,\"class\",\"material-icons\"],[7],[0,\"\"],[8],[0,\"\\n\"]],\"parameters\":[]},{\"statements\":[[0,\"                            \"],[6,\"i\"],[9,\"class\",\"material-icons\"],[7],[0,\"\"],[8],[0,\"\\n\"]],\"parameters\":[]}],[0,\"                    \"],[8],[0,\"\\n                \"],[8],[0,\"\\n            \"],[8],[0,\"\\n\"]],\"parameters\":[2]},null]],\"parameters\":[]},null],[0,\"    \"],[6,\"div\"],[9,\"class\",\"row\"],[7],[0,\"\\n\"],[4,\"each\",[[20,[\"ytSubVideos\"]]],null,{\"statements\":[[0,\"            \"],[6,\"div\"],[9,\"class\",\"col s6 m4 l3\"],[7],[1,[25,\"cy-youtube\",null,[[\"ytVideo\"],[[19,1,[]]]]],false],[8],[0,\"\\n\"]],\"parameters\":[1]},null],[0,\"    \"],[8],[0,\"\\n    \"],[2,\"page1\"],[0,\"\\n    \"],[2,\"page2\"],[0,\"\\n    \"],[6,\"br\"],[7],[8],[0,\"\\n    \"],[1,[18,\"outlet\"],false],[0,\"\\n\"],[8],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "moduleName": "countdown-year/templates/application.hbs" } });
+});
+define("countdown-year/templates/components/cy-youtube", ["exports"], function (exports) {
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = Ember.HTMLBars.template({ "id": "stAGmfaZ", "block": "{\"symbols\":[],\"statements\":[[6,\"div\"],[9,\"class\",\"card\"],[9,\"style\",\"position: inherit;\"],[7],[0,\"\\n    \"],[6,\"div\"],[7],[0,\"\\n        \"],[1,[25,\"ember-youtube\",null,[[\"ytid\",\"playerVars\",\"width\",\"height\",\"delegate\",\"delegate-as\"],[[20,[\"ytVideo\",\"id\"]],[20,[\"playerVars\"]],\"100%\",\"100%\",[19,0,[]],\"emberYoutube\"]]],false],[0,\"\\n    \"],[8],[0,\"\\n    \"],[6,\"div\"],[9,\"class\",\"card-content\"],[7],[0,\"\\n        \"],[6,\"small\"],[7],[1,[20,[\"ytVideo\",\"title\"]],false],[8],[0,\"\\n    \"],[8],[0,\"\\n    \"],[6,\"div\"],[9,\"class\",\"card-action\"],[9,\"style\",\"position: inherit;\"],[7],[0,\"\\n        \"],[6,\"button\"],[9,\"class\",\"btn-floating waves-effect waves-light\"],[3,\"action\",[[19,0,[]],\"togglePlay\"],[[\"target\"],[[20,[\"emberYoutube\"]]]]],[7],[0,\"\\n\"],[4,\"if\",[[20,[\"emberYoutube\",\"isPlaying\"]]],null,{\"statements\":[[0,\"                \"],[6,\"i\"],[9,\"class\",\"material-icons\"],[7],[0,\"\"],[8],[0,\"\\n\"]],\"parameters\":[]},{\"statements\":[[0,\"                \"],[6,\"i\"],[9,\"class\",\"material-icons\"],[7],[0,\"\"],[8],[0,\"\\n\"]],\"parameters\":[]}],[0,\"        \"],[8],[0,\"\\n        \"],[6,\"button\"],[9,\"class\",\"btn-floating waves-effect waves-light\"],[3,\"action\",[[19,0,[]],\"toggleVolume\"],[[\"target\"],[[20,[\"emberYoutube\"]]]]],[7],[0,\"\\n\"],[4,\"if\",[[20,[\"emberYoutube\",\"isMuted\"]]],null,{\"statements\":[[0,\"                \"],[6,\"i\"],[9,\"class\",\"material-icons\"],[7],[0,\"\"],[8],[0,\"\\n\"]],\"parameters\":[]},{\"statements\":[[0,\"                \"],[6,\"i\"],[9,\"class\",\"material-icons\"],[7],[0,\"\"],[8],[0,\"\\n\"]],\"parameters\":[]}],[0,\"        \"],[8],[0,\"\\n        \"],[6,\"button\"],[9,\"class\",\"btn-floating waves-effect waves-write right\"],[3,\"action\",[[19,0,[]],[25,\"route-action\",[\"adjust\",[20,[\"ytVideo\"]]],null]]],[7],[0,\"\\n            \"],[6,\"i\"],[9,\"class\",\"small material-icons\"],[7],[0,\"arrow_upward\"],[8],[0,\"\\n        \"],[8],[0,\"\\n    \"],[8],[0,\"\\n\"],[8]],\"hasEval\":false}", "meta": { "moduleName": "countdown-year/templates/components/cy-youtube.hbs" } });
 });
 define("countdown-year/templates/components/ember-youtube", ["exports"], function (exports) {
   "use strict";
@@ -616,6 +1275,205 @@ define("countdown-year/templates/page2", ["exports"], function (exports) {
   });
   exports.default = Ember.HTMLBars.template({ "id": "ouUvgVQm", "block": "{\"symbols\":[],\"statements\":[[0,\"page2\\n\"],[1,[18,\"outlet\"],false]],\"hasEval\":false}", "meta": { "moduleName": "countdown-year/templates/page2.hbs" } });
 });
+define("countdown-year/transitions", ["exports"], function (exports) {
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  exports.default = function () {
+    // Add your transitions here, like:
+    //   this.transition(
+    //     this.fromRoute('people.index'),
+    //     this.toRoute('people.detail'),
+    //     this.use('toLeft'),
+    //     this.reverse('toRight')
+    //   );
+  };
+});
+define('countdown-year/transitions/cross-fade', ['exports', 'liquid-fire/transitions/cross-fade'], function (exports, _crossFade) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _crossFade.default;
+    }
+  });
+});
+define('countdown-year/transitions/default', ['exports', 'liquid-fire/transitions/default'], function (exports, _default) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _default.default;
+    }
+  });
+});
+define('countdown-year/transitions/explode', ['exports', 'liquid-fire/transitions/explode'], function (exports, _explode) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _explode.default;
+    }
+  });
+});
+define('countdown-year/transitions/fade', ['exports', 'liquid-fire/transitions/fade'], function (exports, _fade) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _fade.default;
+    }
+  });
+});
+define('countdown-year/transitions/flex-grow', ['exports', 'liquid-fire/transitions/flex-grow'], function (exports, _flexGrow) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _flexGrow.default;
+    }
+  });
+});
+define('countdown-year/transitions/fly-to', ['exports', 'liquid-fire/transitions/fly-to'], function (exports, _flyTo) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _flyTo.default;
+    }
+  });
+});
+define('countdown-year/transitions/move-over', ['exports', 'liquid-fire/transitions/move-over'], function (exports, _moveOver) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _moveOver.default;
+    }
+  });
+});
+define('countdown-year/transitions/scale', ['exports', 'liquid-fire/transitions/scale'], function (exports, _scale) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _scale.default;
+    }
+  });
+});
+define('countdown-year/transitions/scroll-then', ['exports', 'liquid-fire/transitions/scroll-then'], function (exports, _scrollThen) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _scrollThen.default;
+    }
+  });
+});
+define('countdown-year/transitions/to-down', ['exports', 'liquid-fire/transitions/to-down'], function (exports, _toDown) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _toDown.default;
+    }
+  });
+});
+define('countdown-year/transitions/to-left', ['exports', 'liquid-fire/transitions/to-left'], function (exports, _toLeft) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _toLeft.default;
+    }
+  });
+});
+define('countdown-year/transitions/to-right', ['exports', 'liquid-fire/transitions/to-right'], function (exports, _toRight) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _toRight.default;
+    }
+  });
+});
+define('countdown-year/transitions/to-up', ['exports', 'liquid-fire/transitions/to-up'], function (exports, _toUp) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _toUp.default;
+    }
+  });
+});
+define('countdown-year/transitions/wait', ['exports', 'liquid-fire/transitions/wait'], function (exports, _wait) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _wait.default;
+    }
+  });
+});
 
 
 define('countdown-year/config/environment', [], function() {
@@ -638,6 +1496,6 @@ catch(err) {
 });
 
 if (!runningTests) {
-  require("countdown-year/app")["default"].create({"name":"countdown-year","version":"0.0.0+8f0b017b"});
+  require("countdown-year/app")["default"].create({"name":"countdown-year","version":"0.0.0+0cae6d49"});
 }
 //# sourceMappingURL=countdown-year.map
