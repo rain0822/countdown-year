@@ -1,0 +1,27 @@
+<div class="card" style="position: inherit;">
+    <div>
+        {{ember-youtube ytid=ytVideo.id playerVars=playerVars width='100%' height='100%' delegate=this delegate-as="emberYoutube"}}
+    </div>
+    <div class="card-content">
+        <small>{{ytVideo.title}}</small>
+    </div>
+    <div class="card-action" style="position: inherit;">
+        <button {{action "togglePlay" target=emberYoutube}} class="btn-floating waves-effect waves-light">
+            {{#if emberYoutube.isPlaying}}
+                <i class="material-icons">&#xE034;</i>
+            {{else}}
+                <i class="material-icons">&#xE037;</i>
+            {{/if}}
+        </button>
+        <button {{action "toggleVolume" target=emberYoutube}} class="btn-floating waves-effect waves-light">
+            {{#if emberYoutube.isMuted}}
+                <i class="material-icons">&#xE04F;</i>
+            {{else}}
+                <i class="material-icons">&#xE050;</i>
+            {{/if}}
+        </button>
+        <button {{action (route-action 'adjust' ytVideo)}} class="btn-floating waves-effect waves-write right">
+            <i class="small material-icons">arrow_upward</i>
+        </button>
+    </div>
+</div>

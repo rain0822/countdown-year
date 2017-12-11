@@ -1,6 +1,9 @@
 import Controller from '@ember/controller';
 
 export default Controller.extend({
+    hours: '32',
+    minutes: '31',
+    seconds: '32',
     ytVideos: [{
         id: 'Jv3zvWZlXkk',
         title: '終於結束的起點',
@@ -25,11 +28,6 @@ export default Controller.extend({
     playerVars: {
         autoplay: 1,
         showinfo: 0,
-        modestbranding: 1
-    },
-    subPlayerVars: {
-        autoplay: 1,
-        showinfo: 0,
         controls: 0,
         modestbranding: 1
     },
@@ -38,13 +36,5 @@ export default Controller.extend({
         let mainVideo = this.get('ytSubVideos').objectAt(0);
         this.set('mainVideo', mainVideo);
         this.get('ytSubVideos').removeObject(mainVideo);
-    },
-    actions: {
-        adjust(video) {
-            let oldVideo = this.get('mainVideo');
-            this.set('mainVideo', video);
-            this.get('ytSubVideos').removeObject(video);
-            this.get('ytSubVideos').addObject(oldVideo);
-        }
     }
 });
