@@ -6,16 +6,16 @@
                     {{ember-youtube ytid=mainVideo.id playerVars=playerVars width='100%' height='100%' delegate=this delegate-as="emberYoutube"}}
                 </div>
                 <div class="card-content">
-                    <button {{action "togglePlay" target=emberYoutube}} class="btn-floating waves-effect waves-light">
+                    <button {{action "togglePlay" target=emberYoutube}} class="btn-floating waves-effect">
                         {{#if emberYoutube.isPlaying}}
                             <i class="material-icons">&#xE034;</i>
                         {{else}}
                             <i class="material-icons">&#xE037;</i>
                         {{/if}}
                     </button>
-                    <button {{action "toggleVolume" target=emberYoutube}} class="btn-floating waves-effect waves-light">
+                    <button {{action "toggleVolume" target=emberYoutube}} class="btn-floating waves-effect">
                         {{#if emberYoutube.isMuted}}
-                            <i class="material-icons">&#xE04F;</i>
+                            <i class="material-icons red">&#xE04F;</i>
                         {{else}}
                             <i class="material-icons">&#xE050;</i>
                         {{/if}}
