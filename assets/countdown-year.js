@@ -435,10 +435,12 @@ define('countdown-year/controllers/application', ['exports'], function (exports)
         allCookies: computed(function () {
             //alert(123);
             var cookieService = this.get('cookies');
-            var items = JSON.parse(cookieService.read()['items']);
+            var items = cookieService.read()['items'];
             //items = [];
             if (Ember.isEmpty(items)) {
                 items = [];
+            } else {
+                items = JSON.parse(items);
             }
             items.push(1);
             items.push(2);
@@ -1645,6 +1647,6 @@ catch(err) {
 });
 
 if (!runningTests) {
-  require("countdown-year/app")["default"].create({"name":"countdown-year","version":"0.0.0+bc5db1bf"});
+  require("countdown-year/app")["default"].create({"name":"countdown-year","version":"0.0.0+e45094e6"});
 }
 //# sourceMappingURL=countdown-year.map
