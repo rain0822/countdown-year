@@ -1,6 +1,11 @@
+import Ember from 'ember';
 import Controller from '@ember/controller';
+const { inject: { service }, computed } = Ember;
+/*const { keys } = Object;*/
 
 export default Controller.extend({
+    cookies: service(),
+    moment: service(),
     hours: '32',
     minutes: '31',
     seconds: '32',
@@ -55,5 +60,26 @@ export default Controller.extend({
         let mainVideo = this.get('ytSubVideos').objectAt(0);
         this.set('mainVideo', mainVideo);
         this.get('ytSubVideos').removeObject(mainVideo);
-    }
+    },
+    allCookies: computed(function() {
+        //alert(123);
+        let cookieService = this.get('cookies');
+        let items = JSON.parse(cookieService.read()['items']);
+        //items = [];
+        if(Ember.isEmpty(items)) {
+            items = [];
+        }
+        items.push(1);
+        items.push(2);
+        cookieService.write('items', JSON.stringify(items));
+/*
+        let cookies = cookieService.read();
+        return keys(cookies).reduce((acc, key) => {
+            let value = cookies[key];
+            acc.push({ name: key, value });
+
+            return acc;
+        }, []);*/
+        return '';
+    })
 });
