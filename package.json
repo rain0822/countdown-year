@@ -14,7 +14,7 @@
     "build": "ember build",
     "start": "ember serve",
     "test": "ember test",
-    "deploy": "ember github-pages:commit --message \"Deploy gh-pages from commit $(git rev-parse HEAD)\"; git push; git checkout -"
+    "deploy": "ember github-pages:commit --message \"Deploy gh-pages from commit $(git rev-parse HEAD)\" && git push origin gh-pages:gh-pages"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
