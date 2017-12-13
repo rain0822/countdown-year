@@ -34,6 +34,58 @@ define("countdown-year/components/-lf-get-outlet-state", ["exports", "liquid-fir
     }
   });
 });
+define('countdown-year/components/basic-dropdown', ['exports', 'ember-basic-dropdown/components/basic-dropdown'], function (exports, _basicDropdown) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _basicDropdown.default;
+    }
+  });
+});
+define('countdown-year/components/basic-dropdown/content-element', ['exports', 'ember-basic-dropdown/components/basic-dropdown/content-element'], function (exports, _contentElement) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _contentElement.default;
+    }
+  });
+});
+define('countdown-year/components/basic-dropdown/content', ['exports', 'ember-basic-dropdown/components/basic-dropdown/content'], function (exports, _content) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _content.default;
+    }
+  });
+});
+define('countdown-year/components/basic-dropdown/trigger', ['exports', 'ember-basic-dropdown/components/basic-dropdown/trigger'], function (exports, _trigger) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _trigger.default;
+    }
+  });
+});
 define('countdown-year/components/cy-youtube', ['exports'], function (exports) {
     'use strict';
 
@@ -56,6 +108,19 @@ define('countdown-year/components/cy-youtube', ['exports'], function (exports) {
         }
     });
 });
+define('countdown-year/components/ember-wormhole', ['exports', 'ember-wormhole/components/ember-wormhole'], function (exports, _emberWormhole) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _emberWormhole.default;
+    }
+  });
+});
 define('countdown-year/components/ember-youtube', ['exports', 'ember-youtube/components/ember-youtube'], function (exports, _emberYoutube) {
   'use strict';
 
@@ -63,6 +128,58 @@ define('countdown-year/components/ember-youtube', ['exports', 'ember-youtube/com
     value: true
   });
   exports.default = _emberYoutube.default;
+});
+define('countdown-year/components/esp-menu', ['exports', 'ember-slide-push-menu/components/esp-menu'], function (exports, _espMenu) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _espMenu.default;
+    }
+  });
+});
+define('countdown-year/components/fa-icon', ['exports', 'ember-font-awesome/components/fa-icon'], function (exports, _faIcon) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _faIcon.default;
+    }
+  });
+});
+define('countdown-year/components/fa-list', ['exports', 'ember-font-awesome/components/fa-list'], function (exports, _faList) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _faList.default;
+    }
+  });
+});
+define('countdown-year/components/fa-stack', ['exports', 'ember-font-awesome/components/fa-stack'], function (exports, _faStack) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function () {
+      return _faStack.default;
+    }
+  });
 });
 define("countdown-year/components/illiquid-model", ["exports", "liquid-fire/components/illiquid-model"], function (exports, _illiquidModel) {
   "use strict";
@@ -247,19 +364,6 @@ define('countdown-year/components/sticky-element/trigger', ['exports', 'ember-st
     }
   });
 });
-define('countdown-year/components/welcome-page', ['exports', 'ember-welcome-page/components/welcome-page'], function (exports, _welcomePage) {
-  'use strict';
-
-  Object.defineProperty(exports, "__esModule", {
-    value: true
-  });
-  Object.defineProperty(exports, 'default', {
-    enumerable: true,
-    get: function () {
-      return _welcomePage.default;
-    }
-  });
-});
 define('countdown-year/controllers/application', ['exports'], function (exports) {
     'use strict';
 
@@ -267,7 +371,11 @@ define('countdown-year/controllers/application', ['exports'], function (exports)
         value: true
     });
     var Controller = Ember.Controller;
+    var service = Ember.inject.service,
+        computed = Ember.computed;
     exports.default = Controller.extend({
+        cookies: service(),
+        moment: service(),
         hours: '32',
         minutes: '31',
         seconds: '32',
@@ -322,7 +430,29 @@ define('countdown-year/controllers/application', ['exports'], function (exports)
             var mainVideo = this.get('ytSubVideos').objectAt(0);
             this.set('mainVideo', mainVideo);
             this.get('ytSubVideos').removeObject(mainVideo);
-        }
+        },
+
+        allCookies: computed(function () {
+            //alert(123);
+            var cookieService = this.get('cookies');
+            var items = JSON.parse(cookieService.read()['items']);
+            //items = [];
+            if (Ember.isEmpty(items)) {
+                items = [];
+            }
+            items.push(1);
+            items.push(2);
+            cookieService.write('items', JSON.stringify(items));
+            /*
+                    let cookies = cookieService.read();
+                    return keys(cookies).reduce((acc, key) => {
+                        let value = cookies[key];
+                        acc.push({ name: key, value });
+            
+                        return acc;
+                    }, []);*/
+            return '';
+        })
     });
 });
 define('countdown-year/helpers/and', ['exports', 'ember-truth-helpers/helpers/and'], function (exports, _and) {
@@ -1260,7 +1390,7 @@ define("countdown-year/templates/application", ["exports"], function (exports) {
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
-  exports.default = Ember.HTMLBars.template({ "id": "VoA0doYH", "block": "{\"symbols\":[\"ytVideo\",\"currentModel\"],\"statements\":[[6,\"div\"],[9,\"class\",\"container\"],[7],[0,\"\\n\"],[4,\"sticky-element\",null,null,{\"statements\":[[4,\"liquid-bind\",[[20,[\"mainVideo\"]]],[[\"use\"],[\"scale\"]],{\"statements\":[[0,\"            \"],[6,\"div\"],[9,\"class\",\"card\"],[9,\"style\",\"margin: 0px;\"],[7],[0,\"\\n                \"],[6,\"div\"],[7],[0,\"\\n                    \"],[1,[25,\"ember-youtube\",null,[[\"ytid\",\"playerVars\",\"width\",\"height\",\"delegate\",\"delegate-as\"],[[20,[\"mainVideo\",\"id\"]],[20,[\"playerVars\"]],\"100%\",\"100%\",[19,0,[]],\"emberYoutube\"]]],false],[0,\"\\n                \"],[8],[0,\"\\n                \"],[6,\"div\"],[9,\"class\",\"card-content\"],[7],[0,\"\\n                    \"],[6,\"button\"],[9,\"class\",\"btn-floating waves-effect waves-light\"],[3,\"action\",[[19,0,[]],\"togglePlay\"],[[\"target\"],[[20,[\"emberYoutube\"]]]]],[7],[0,\"\\n\"],[4,\"if\",[[20,[\"emberYoutube\",\"isPlaying\"]]],null,{\"statements\":[[0,\"                            \"],[6,\"i\"],[9,\"class\",\"material-icons\"],[7],[0,\"\"],[8],[0,\"\\n\"]],\"parameters\":[]},{\"statements\":[[0,\"                            \"],[6,\"i\"],[9,\"class\",\"material-icons\"],[7],[0,\"\"],[8],[0,\"\\n\"]],\"parameters\":[]}],[0,\"                    \"],[8],[0,\"\\n                    \"],[6,\"button\"],[9,\"class\",\"btn-floating waves-effect waves-light\"],[3,\"action\",[[19,0,[]],\"toggleVolume\"],[[\"target\"],[[20,[\"emberYoutube\"]]]]],[7],[0,\"\\n\"],[4,\"if\",[[20,[\"emberYoutube\",\"isMuted\"]]],null,{\"statements\":[[0,\"                            \"],[6,\"i\"],[9,\"class\",\"material-icons\"],[7],[0,\"\"],[8],[0,\"\\n\"]],\"parameters\":[]},{\"statements\":[[0,\"                            \"],[6,\"i\"],[9,\"class\",\"material-icons\"],[7],[0,\"\"],[8],[0,\"\\n\"]],\"parameters\":[]}],[0,\"                    \"],[8],[0,\"\\n                    \"],[6,\"div\"],[9,\"class\",\"right\"],[7],[1,[20,[\"mainVideo\",\"title\"]],false],[8],[0,\"\\n                \"],[8],[0,\"\\n            \"],[8],[0,\"\\n\"]],\"parameters\":[2]},null]],\"parameters\":[]},null],[0,\"    \"],[6,\"div\"],[9,\"class\",\"row\"],[7],[0,\"\\n\"],[4,\"each\",[[20,[\"ytSubVideos\"]]],null,{\"statements\":[[0,\"            \"],[6,\"div\"],[9,\"class\",\"col s6 m4 l3\"],[7],[1,[25,\"cy-youtube\",null,[[\"ytVideo\"],[[19,1,[]]]]],false],[8],[0,\"\\n\"]],\"parameters\":[1]},null],[0,\"    \"],[8],[0,\"\\n    \"],[2,\"page1\"],[0,\"\\n    \"],[2,\"page2\"],[0,\"\\n    \"],[6,\"br\"],[7],[8],[0,\"\\n    \"],[1,[18,\"outlet\"],false],[0,\"\\n\"],[8],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "moduleName": "countdown-year/templates/application.hbs" } });
+  exports.default = Ember.HTMLBars.template({ "id": "QmZoBgYy", "block": "{\"symbols\":[\"ytVideo\",\"currentModel\"],\"statements\":[[6,\"div\"],[9,\"class\",\"container\"],[7],[0,\"\\n\"],[4,\"sticky-element\",null,null,{\"statements\":[[4,\"liquid-bind\",[[20,[\"mainVideo\"]]],[[\"use\"],[\"scale\"]],{\"statements\":[[0,\"            \"],[6,\"div\"],[9,\"class\",\"card\"],[9,\"style\",\"margin: 0px;\"],[7],[0,\"\\n                \"],[6,\"div\"],[7],[0,\"\\n                    \"],[1,[25,\"ember-youtube\",null,[[\"ytid\",\"playerVars\",\"width\",\"height\",\"delegate\",\"delegate-as\"],[[20,[\"mainVideo\",\"id\"]],[20,[\"playerVars\"]],\"100%\",\"100%\",[19,0,[]],\"emberYoutube\"]]],false],[0,\"\\n                \"],[8],[0,\"\\n                \"],[6,\"div\"],[9,\"class\",\"card-content\"],[7],[0,\"\\n                    \"],[6,\"button\"],[9,\"class\",\"btn-floating waves-effect\"],[3,\"action\",[[19,0,[]],\"togglePlay\"],[[\"target\"],[[20,[\"emberYoutube\"]]]]],[7],[0,\"\\n\"],[4,\"if\",[[20,[\"emberYoutube\",\"isPlaying\"]]],null,{\"statements\":[[0,\"                            \"],[6,\"i\"],[9,\"class\",\"material-icons\"],[7],[0,\"\"],[8],[0,\"\\n\"]],\"parameters\":[]},{\"statements\":[[0,\"                            \"],[6,\"i\"],[9,\"class\",\"material-icons\"],[7],[0,\"\"],[8],[0,\"\\n\"]],\"parameters\":[]}],[0,\"                    \"],[8],[0,\"\\n                    \"],[6,\"button\"],[9,\"class\",\"btn-floating waves-effect\"],[3,\"action\",[[19,0,[]],\"toggleVolume\"],[[\"target\"],[[20,[\"emberYoutube\"]]]]],[7],[0,\"\\n\"],[4,\"if\",[[20,[\"emberYoutube\",\"isMuted\"]]],null,{\"statements\":[[0,\"                            \"],[6,\"i\"],[9,\"class\",\"material-icons red\"],[7],[0,\"\"],[8],[0,\"\\n\"]],\"parameters\":[]},{\"statements\":[[0,\"                            \"],[6,\"i\"],[9,\"class\",\"material-icons\"],[7],[0,\"\"],[8],[0,\"\\n\"]],\"parameters\":[]}],[0,\"                    \"],[8],[0,\"\\n                    \"],[6,\"div\"],[9,\"class\",\"right\"],[7],[1,[20,[\"mainVideo\",\"title\"]],false],[8],[0,\"\\n                \"],[8],[0,\"\\n            \"],[8],[0,\"\\n\"]],\"parameters\":[2]},null]],\"parameters\":[]},null],[0,\"    \"],[6,\"div\"],[9,\"class\",\"row\"],[7],[0,\"\\n\"],[4,\"each\",[[20,[\"ytSubVideos\"]]],null,{\"statements\":[[0,\"            \"],[6,\"div\"],[9,\"class\",\"col s6 m4 l3\"],[7],[1,[25,\"cy-youtube\",null,[[\"ytVideo\"],[[19,1,[]]]]],false],[8],[0,\"\\n\"]],\"parameters\":[1]},null],[0,\"    \"],[8],[0,\"\\n    \"],[2,\"page1\"],[0,\"\\n    \"],[2,\"page2\"],[0,\"\\n    \"],[6,\"br\"],[7],[8],[0,\"\\n    \"],[1,[18,\"outlet\"],false],[0,\"\\n    \"],[1,[18,\"allCookies\"],false],[0,\"\\n\"],[8],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "moduleName": "countdown-year/templates/application.hbs" } });
 });
 define("countdown-year/templates/components/cy-youtube", ["exports"], function (exports) {
   "use strict";
@@ -1268,7 +1398,7 @@ define("countdown-year/templates/components/cy-youtube", ["exports"], function (
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
-  exports.default = Ember.HTMLBars.template({ "id": "stAGmfaZ", "block": "{\"symbols\":[],\"statements\":[[6,\"div\"],[9,\"class\",\"card\"],[9,\"style\",\"position: inherit;\"],[7],[0,\"\\n    \"],[6,\"div\"],[7],[0,\"\\n        \"],[1,[25,\"ember-youtube\",null,[[\"ytid\",\"playerVars\",\"width\",\"height\",\"delegate\",\"delegate-as\"],[[20,[\"ytVideo\",\"id\"]],[20,[\"playerVars\"]],\"100%\",\"100%\",[19,0,[]],\"emberYoutube\"]]],false],[0,\"\\n    \"],[8],[0,\"\\n    \"],[6,\"div\"],[9,\"class\",\"card-content\"],[7],[0,\"\\n        \"],[6,\"small\"],[7],[1,[20,[\"ytVideo\",\"title\"]],false],[8],[0,\"\\n    \"],[8],[0,\"\\n    \"],[6,\"div\"],[9,\"class\",\"card-action\"],[9,\"style\",\"position: inherit;\"],[7],[0,\"\\n        \"],[6,\"button\"],[9,\"class\",\"btn-floating waves-effect waves-light\"],[3,\"action\",[[19,0,[]],\"togglePlay\"],[[\"target\"],[[20,[\"emberYoutube\"]]]]],[7],[0,\"\\n\"],[4,\"if\",[[20,[\"emberYoutube\",\"isPlaying\"]]],null,{\"statements\":[[0,\"                \"],[6,\"i\"],[9,\"class\",\"material-icons\"],[7],[0,\"\"],[8],[0,\"\\n\"]],\"parameters\":[]},{\"statements\":[[0,\"                \"],[6,\"i\"],[9,\"class\",\"material-icons\"],[7],[0,\"\"],[8],[0,\"\\n\"]],\"parameters\":[]}],[0,\"        \"],[8],[0,\"\\n        \"],[6,\"button\"],[9,\"class\",\"btn-floating waves-effect waves-light\"],[3,\"action\",[[19,0,[]],\"toggleVolume\"],[[\"target\"],[[20,[\"emberYoutube\"]]]]],[7],[0,\"\\n\"],[4,\"if\",[[20,[\"emberYoutube\",\"isMuted\"]]],null,{\"statements\":[[0,\"                \"],[6,\"i\"],[9,\"class\",\"material-icons\"],[7],[0,\"\"],[8],[0,\"\\n\"]],\"parameters\":[]},{\"statements\":[[0,\"                \"],[6,\"i\"],[9,\"class\",\"material-icons\"],[7],[0,\"\"],[8],[0,\"\\n\"]],\"parameters\":[]}],[0,\"        \"],[8],[0,\"\\n        \"],[6,\"button\"],[9,\"class\",\"btn-floating waves-effect waves-write right\"],[3,\"action\",[[19,0,[]],[25,\"route-action\",[\"adjust\",[20,[\"ytVideo\"]]],null]]],[7],[0,\"\\n            \"],[6,\"i\"],[9,\"class\",\"small material-icons\"],[7],[0,\"arrow_upward\"],[8],[0,\"\\n        \"],[8],[0,\"\\n    \"],[8],[0,\"\\n\"],[8]],\"hasEval\":false}", "meta": { "moduleName": "countdown-year/templates/components/cy-youtube.hbs" } });
+  exports.default = Ember.HTMLBars.template({ "id": "RzoA8dLk", "block": "{\"symbols\":[],\"statements\":[[6,\"div\"],[9,\"class\",\"card\"],[9,\"style\",\"position: inherit;\"],[7],[0,\"\\n    \"],[6,\"div\"],[7],[0,\"\\n        \"],[1,[25,\"ember-youtube\",null,[[\"ytid\",\"playerVars\",\"width\",\"height\",\"delegate\",\"delegate-as\"],[[20,[\"ytVideo\",\"id\"]],[20,[\"playerVars\"]],\"100%\",\"100%\",[19,0,[]],\"emberYoutube\"]]],false],[0,\"\\n    \"],[8],[0,\"\\n    \"],[6,\"div\"],[9,\"class\",\"card-content\"],[7],[0,\"\\n        \"],[6,\"small\"],[7],[1,[20,[\"ytVideo\",\"title\"]],false],[8],[0,\"\\n    \"],[8],[0,\"\\n    \"],[6,\"div\"],[9,\"class\",\"card-action\"],[9,\"style\",\"position: inherit;\"],[7],[0,\"\\n        \"],[6,\"button\"],[9,\"class\",\"btn-floating waves-effect\"],[3,\"action\",[[19,0,[]],\"togglePlay\"],[[\"target\"],[[20,[\"emberYoutube\"]]]]],[7],[0,\"\\n\"],[4,\"if\",[[20,[\"emberYoutube\",\"isPlaying\"]]],null,{\"statements\":[[0,\"                \"],[6,\"i\"],[9,\"class\",\"material-icons\"],[7],[0,\"\"],[8],[0,\"\\n\"]],\"parameters\":[]},{\"statements\":[[0,\"                \"],[6,\"i\"],[9,\"class\",\"material-icons\"],[7],[0,\"\"],[8],[0,\"\\n\"]],\"parameters\":[]}],[0,\"        \"],[8],[0,\"\\n        \"],[6,\"button\"],[9,\"class\",\"btn-floating waves-effect\"],[3,\"action\",[[19,0,[]],\"toggleVolume\"],[[\"target\"],[[20,[\"emberYoutube\"]]]]],[7],[0,\"\\n\"],[4,\"if\",[[20,[\"emberYoutube\",\"isMuted\"]]],null,{\"statements\":[[0,\"                \"],[6,\"i\"],[9,\"class\",\"material-icons red\"],[7],[0,\"\"],[8],[0,\"\\n\"]],\"parameters\":[]},{\"statements\":[[0,\"                \"],[6,\"i\"],[9,\"class\",\"material-icons\"],[7],[0,\"\"],[8],[0,\"\\n\"]],\"parameters\":[]}],[0,\"        \"],[8],[0,\"\\n        \"],[6,\"button\"],[9,\"class\",\"btn-floating waves-effect waves-write right\"],[3,\"action\",[[19,0,[]],[25,\"route-action\",[\"adjust\",[20,[\"ytVideo\"]]],null]]],[7],[0,\"\\n            \"],[6,\"i\"],[9,\"class\",\"small material-icons\"],[7],[0,\"arrow_upward\"],[8],[0,\"\\n        \"],[8],[0,\"\\n    \"],[8],[0,\"\\n\"],[8]],\"hasEval\":false}", "meta": { "moduleName": "countdown-year/templates/components/cy-youtube.hbs" } });
 });
 define("countdown-year/templates/components/ember-youtube", ["exports"], function (exports) {
   "use strict";
@@ -1515,6 +1645,6 @@ catch(err) {
 });
 
 if (!runningTests) {
-  require("countdown-year/app")["default"].create({"name":"countdown-year","version":"0.0.0+9c7e512c"});
+  require("countdown-year/app")["default"].create({"name":"countdown-year","version":"0.0.0+bc5db1bf"});
 }
 //# sourceMappingURL=countdown-year.map
