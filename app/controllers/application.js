@@ -64,10 +64,12 @@ export default Controller.extend({
     allCookies: computed(function() {
         //alert(123);
         let cookieService = this.get('cookies');
-        let items = JSON.parse(cookieService.read()['items']);
+        let items = cookieService.read()['items'];
         //items = [];
         if(Ember.isEmpty(items)) {
             items = [];
+        } else {
+            items = JSON.parse(items);
         }
         items.push(1);
         items.push(2);
