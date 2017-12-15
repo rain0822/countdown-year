@@ -11,12 +11,25 @@
     <meta property="og:image" content="https://rain0822.github.io/countdown-year/countdown-year.jpg" />
     <meta property="fb:app_id" content="1863136880589199" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffa105">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Let's Cook">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="msapplication-config" content="{{rootURL}}browserconfig.xml">
 
     {{content-for "head"}}
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link integrity="" rel="stylesheet" href="{{rootURL}}assets/vendor.css">
     <link integrity="" rel="stylesheet" href="{{rootURL}}assets/countdown-year.css">
+
+    <link rel="manifest" href="{{rootURL}}manifest.webmanifest">
+
+    <link rel="apple-touch-icon" href="{{rootURL}}images/icons/android-chrome-192x192-883114367f2d72fc9a509409454a1e73.png" sizes="192x192">
+    <link rel="apple-touch-icon" href="{{rootURL}}images/icons/android-chrome-512x512-af3d768ff652dc2be589a3c22c6dc827.png" sizes="512x512">
+    <link rel="apple-touch-icon" href="{{rootURL}}images/icons/apple-touch-icon-36cba25bc155e8ba414265f9d85861ca.png" sizes="180x180">
 
     {{content-for "head-footer"}}
   </head>
@@ -25,7 +38,7 @@
 
     <script src="{{rootURL}}assets/vendor.js"></script>
     <script src="{{rootURL}}assets/countdown-year.js"></script>
-
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>-->
     {{content-for "body-footer"}}
   </body>
 </html>

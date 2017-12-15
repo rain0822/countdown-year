@@ -16,15 +16,15 @@ export default Controller.extend({
         id: 'pd3eV-SG23E',
         title: '後來的我們'
     },{
-        id: '38lcQsEMGrk',
+        /*id: '38lcQsEMGrk',
         title: '我不願讓你一個人'
-    },{
-        id: '_o0oeyCtoFA',
+    },{*/
+        /*id: '_o0oeyCtoFA',
         title: '知足'
-    },{
-        id: 'Y-0Ra3PvTWg',
+    },{*/
+        /*id: 'Y-0Ra3PvTWg',
         title: '乾杯'
-    },{
+    },{*/
         id: 'zBJjFEE0rUc',
         title: '突然好想你'
     },{
@@ -43,9 +43,9 @@ export default Controller.extend({
         id: 'R2s-H_crYkc',
         title: '倔強'
     },{
-        id: 'iSkRGgYSQfY',
+        /*id: 'iSkRGgYSQfY',
         title: '戀愛ing'
-    },{
+    },{*/
         id: '5VUUGZ1-nlY',
         title: '志明與春嬌'
     }],

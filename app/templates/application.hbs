@@ -1,34 +1,47 @@
 <div class="container">
-    {{#sticky-element}}
-        {{#liquid-bind mainVideo use="scale" as |currentModel|}}
-            <div class="card" style="margin: 0px;">
-                <div>
-                    {{ember-youtube ytid=mainVideo.id playerVars=playerVars width='100%' height='100%' delegate=this delegate-as="emberYoutube"}}
-                </div>
-                <div class="card-content">
-                    <button {{action "togglePlay" target=emberYoutube}} class="btn-floating waves-effect">
-                        {{#if emberYoutube.isPlaying}}
-                            <i class="material-icons">&#xE034;</i>
-                        {{else}}
-                            <i class="material-icons">&#xE037;</i>
-                        {{/if}}
-                    </button>
-                    <button {{action "toggleVolume" target=emberYoutube}} class="btn-floating waves-effect">
-                        {{#if emberYoutube.isMuted}}
-                            <i class="material-icons red">&#xE04F;</i>
-                        {{else}}
-                            <i class="material-icons">&#xE050;</i>
-                        {{/if}}
-                    </button>
-                    <div class="right">{{mainVideo.title}}</div>
-                </div>
-            </div>
-        {{/liquid-bind}}
-    {{/sticky-element}}
+    {{!#sticky-element}}
+        <!--<ul class="tabs row">
+            <li class="tab col s6"><a href="#witch">觀看</a></li>
+            <li class="tab col s6"><a href="#choose">選擇</a></li>
+        </ul>-->
+    {{!/sticky-element}}
     <div class="row">
-        {{#each ytSubVideos as |ytVideo|}}
-            <div class="col s6 m4 l3">{{cy-youtube ytVideo=ytVideo}}</div>
-        {{/each}}
+        <div id="witch" class="col s12">
+            {{#sticky-element}}
+                {{#liquid-bind mainVideo use="scale" as |currentModel|}}
+                    <div class="card" style="margin: 0px;">
+                        <div>
+                            {{ember-youtube ytid=mainVideo.id playerVars=playerVars width='100%' height='100%' delegate=this delegate-as="emberYoutube"}}
+                        </div>
+                        <div class="card-content">
+                            <button {{action "togglePlay" target=emberYoutube}} class="btn-floating waves-effect">
+                                {{#if emberYoutube.isPlaying}}
+                                    <i class="material-icons">&#xE034;</i>
+                                {{else}}
+                                    <i class="material-icons">&#xE037;</i>
+                                {{/if}}
+                            </button>
+                            <button {{action "toggleVolume" target=emberYoutube}} class="btn-floating waves-effect">
+                                {{#if emberYoutube.isMuted}}
+                                    <i class="material-icons red">&#xE04F;</i>
+                                {{else}}
+                                    <i class="material-icons">&#xE050;</i>
+                                {{/if}}
+                            </button>
+                            <div class="right">{{mainVideo.title}}</div>
+                        </div>
+                    </div>
+                {{/liquid-bind}}
+            {{/sticky-element}}
+            <div class="row">
+                {{#each ytSubVideos as |ytVideo|}}
+                    <div class="col s6 m4 l3">{{cy-youtube ytVideo=ytVideo}}</div>
+                {{/each}}
+            </div>
+        </div>
+        <!--<div id="choose" class="col s12">
+            <div>test22</div><div>test22</div><div>test22</div><div>test22</div><div>test22</div>
+        </div>-->
     </div>
     {{!#link-to 'page1'}}<!--page1-->{{!/link-to}}
     {{!#link-to 'page2'}}<!--page2-->{{!/link-to}}

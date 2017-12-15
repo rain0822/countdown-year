@@ -48,6 +48,7 @@
     "ember-source": "~2.17.0",
     "ember-sticky-element": "^0.1.5",
     "ember-truth-helpers": "^2.0.0",
+    "ember-web-app": "^2.3.0",
     "ember-youtube": "^0.8.2",
     "liquid-fire": "^0.29.1",
     "loader.js": "^4.2.3",
