@@ -1,0 +1,21 @@
+{
+  "name": "Let's Cook",
+  "short_name": "Let's Cook",
+  "description": "An app for organizing your weekly menu and groceries list.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffa105",
+  "theme_color": "#ffa105",
+  "icons": [
+    {
+      "src": "/images/icons/android-chrome-192x192-883114367f2d72fc9a509409454a1e73.png",
+      "sizes": "192x192",
+      "type":"image/png"
+    },
+    {
+      "src": "/images/icons/android-chrome-512x512-af3d768ff652dc2be589a3c22c6dc827.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
