@@ -15,6 +15,9 @@ module.exports = function(/* environment, appConfig */) {
     theme_color: "#fff",
     icons: [
     ],
+    apple: {
+        statusBarStyle: 'black-translucent'
+    },
     ms: {
       tileColor: '#fff'
     }

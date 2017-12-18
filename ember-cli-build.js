@@ -10,6 +10,9 @@ module.exports = function(defaults) {
         includePaths: [
             'node_modules'
         ]
+    },
+    'ember-web-app': {
+      enabled: true
     }
   });
 
