@@ -9,7 +9,7 @@ module.exports = function(/* environment, appConfig */) {
     name: "countdown-year",
     short_name: "countdown-year",
     description: "",
-    start_url: "/",
+    start_url: "/countdown-year",
     display: "standalone",
     background_color: "#fff",
     theme_color: "#fff",
