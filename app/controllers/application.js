@@ -1,14 +1,18 @@
 import Ember from 'ember';
 import Controller from '@ember/controller';
-const { inject: { service }, computed } = Ember;
+const { inject: { service }, computed, observer } = Ember;
 /*const { keys } = Object;*/
 
 export default Controller.extend({
     cookies: service(),
     moment: service(),
+    screen: service(),
     hours: '32',
     minutes: '31',
     seconds: '32',
+    ytHeight: computed('screen.width', function() {
+        return this.get('screen.width') / 4;
+    }),
     ytVideos: [{
         id: 'Jv3zvWZlXkk',
         title: '終於結束的起點'
@@ -49,6 +53,19 @@ export default Controller.extend({
         id: '5VUUGZ1-nlY',
         title: '志明與春嬌'
     }],
+    /*ytResetVideos: observer('mainVideo.id', function() {
+        let ytOddVideos = [];
+        let ytEvenVideos = [];
+        this.get('ytSubVideos').forEach(function(ytSubVideo, index) {
+            if(index % 2 === 0) {
+                ytEvenVideos.push(ytSubVideo);
+            } else {
+                ytOddVideos.push(ytSubVideo);
+            }
+        });
+        this.set('ytOddVideos', ytOddVideos);
+        this.set('ytEvenVideos', ytEvenVideos);
+    }),*/
     playerVars: {
         autoplay: 1,
         showinfo: 0,
@@ -60,6 +77,18 @@ export default Controller.extend({
         let mainVideo = this.get('ytSubVideos').objectAt(0);
         this.set('mainVideo', mainVideo);
         this.get('ytSubVideos').removeObject(mainVideo);
+/*
+        let ytLeftVideos = [];
+        let ytRightVideos = [];
+        this.get('ytSubVideos').forEach(function(ytSubVideo, index) {
+            if(index % 2 === 0) {
+                ytLeftVideos.push(ytSubVideo);
+            } else {
+                ytRightVideos.push(ytSubVideo);
+            }
+        });
+        this.set('ytLeftVideos', ytLeftVideos);
+        this.set('ytRightVideos', ytRightVideos);*/
     },
     allCookies: computed(function() {
         //alert(123);
