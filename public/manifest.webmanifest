@@ -1,19 +1,19 @@
 {
   "name": "2018 全台跨年直播演唱會",
   "short_name": "2018 跨年演唱會",
-  "description": "An app for organizing your weekly menu and groceries list.",
-  "start_url": "/",
+  "description": "演唱會包含：基隆、台北101、桃園、新竹、台中、南投、彰化、雲林、嘉義、台南、高雄、屏東、台東、花蓮、宜蘭",
+  "start_url": "/countdown-year",
   "display": "standalone",
-  "background_color": "#ffa105",
-  "theme_color": "#ffa105",
+  "background_color": "#0fb4ff",
+  "theme_color": "#0fb4ff",
   "icons": [
     {
-      "src": "/images/icons/android-chrome-192x192-883114367f2d72fc9a509409454a1e73.png",
+      "src": "/countdown-year/icon.png",
       "sizes": "192x192",
       "type":"image/png"
     },
     {
-      "src": "/images/icons/android-chrome-512x512-af3d768ff652dc2be589a3c22c6dc827.png",
+      "src": "/countdown-year/icon.png",
       "sizes": "512x512",
       "type": "image/png"
     }

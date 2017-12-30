@@ -2,7 +2,13 @@
     <div class="col s12 l6" style="padding: 0px;">
         {{#sticky-element}}
             <div class="card" style="margin: 0px;">
-                <a href="#" class="btn" onclick={{route-action "toggleSlidePushMenu"}}>{{fa-icon "bars"}}</a>
+                <a href="#" class="btn" onclick={{route-action "toggleSlidePushMenu"}}>
+                    {{#if showMenu}}
+                        {{fa-icon "angle-left"}}
+                    {{else}}
+                        {{fa-icon "bars"}}
+                    {{/if}}
+                </a>
                 <span>2018 跨年演唱會直播</span>
                 {{#if topVideo}}
                     <div>

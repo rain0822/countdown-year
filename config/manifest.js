@@ -6,8 +6,8 @@ module.exports = function(/* environment, appConfig */) {
   // supported properties
 
   return {
-    name: "countdown-year",
-    short_name: "countdown-year",
+    name: "2018 全台跨年直播演唱會",
+    short_name: "2018 跨年演唱會",
     description: "演唱會",
     start_url: "/countdown-year",
     display: "standalone",
