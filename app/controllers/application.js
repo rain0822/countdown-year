@@ -15,7 +15,12 @@ export default Controller.extend({
     }),
     ytVideos: [{
         id: 'u6wyRhL2ZL4',
-        title: '台北最HIGH新年城'
+        title: '台北最HIGH新年城',
+        address: '台北市政府前廣場(11008 臺北市信義區市府路1號)',
+        start: '2017/12/31 19:00',
+        end: '2018/01/01 01:00',
+        hosts: ['Kid', '曾寶儀'],
+        artists: ['Bii','頑童MJ116','盧廣仲','林明楨','周湯豪','艾怡良','丁噹','韋禮安','蔡健雅','鬼鬼','Rain','IN2IT']
     },{
         id: 'miI6KnXkR64',
         title: '飛躍桃園'
@@ -117,7 +122,7 @@ export default Controller.extend({
         });
         this.set('ytLeftVideos', ytLeftVideos);
         this.set('ytRightVideos', ytRightVideos);*/
-    },
+    }/*,
     allCookies: computed(function() {
         //alert(123);
         let cookieService = this.get('cookies');
@@ -131,14 +136,14 @@ export default Controller.extend({
         items.push(1);
         items.push(2);
         cookieService.write('items', JSON.stringify(items));
-/*
+/!*
         let cookies = cookieService.read();
         return keys(cookies).reduce((acc, key) => {
             let value = cookies[key];
             acc.push({ name: key, value });
 
             return acc;
-        }, []);*/
+        }, []);*!/
         return '';
-    })
+    })*/
 });

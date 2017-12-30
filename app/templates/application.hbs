@@ -2,14 +2,19 @@
     <div class="col s12 l6" style="padding: 0px;">
         {{#sticky-element}}
             <div class="card" style="margin: 0px;">
-                <a href="#" class="btn" onclick={{route-action "toggleSlidePushMenu"}}>
-                    {{#if showMenu}}
-                        {{fa-icon "angle-left"}}
-                    {{else}}
-                        {{fa-icon "bars"}}
-                    {{/if}}
-                </a>
-                <span>2018 跨年演唱會直播</span>
+                <div class="center">
+                    {{#unless showInfoMenu}}
+                        <a href="#" class="btn menu-btn left" onclick={{route-action "toggleInfoPushMenu"}}>
+                            {{fa-icon "info-circle"}}
+                        </a>
+                    {{/unless}}
+                    {{#unless showLeftMenu}}
+                        <a href="#" class="btn menu-btn right" onclick={{route-action "toggleLeftPushMenu"}}>
+                            {{fa-icon "bars"}}
+                        </a>
+                    {{/unless}}
+                    <span>2018 跨年演唱會直播</span>
+                </div>
                 {{#if topVideo}}
                     <div>
                         {{ember-youtube ytid=topVideo.id playerVars=playerVars width='100%' height=ytHeight delegate=this delegate-as="emberYoutube"}}
@@ -60,7 +65,25 @@
 {{outlet}}
 {{allCookies}}
 
-{{#esp-menu position="left" pushMenu=pushMenu open=showMenu customClasses='slide-push-menu'}}
+
+{{#esp-menu position="left" pushMenu=pushInfoMenu open=showInfoMenu customClasses='slide-push-menu'}}
+    <a href="#" class="btn menu-btn" onclick={{route-action "toggleInfoPushMenu"}}>x</a>
+    <div style="margin: 1em;">
+        <h5>{{topVideo.address}}</h5>
+        <br/>
+        <div>{{topVideo.start}}</div>
+        <div>{{topVideo.end}}</div>
+        <br/>
+        <div>主持人：{{#each topVideo.hosts as |host|}}{{host}} {{/each}}</div>
+        <div>演唱卡司：</div>
+        {{#each topVideo.artists as |artist|}}
+             <div>{{artist}}</div>
+        {{/each}}
+    </div>
+{{/esp-menu}}
+
+{{#esp-menu position="right" pushMenu=pushLeftMenu open=showLeftMenu customClasses='slide-push-menu'}}
+    <a href="#" class="btn menu-btn" onclick={{route-action "toggleLeftPushMenu"}}>x</a>
     {{#each ytVideos as |ytVideo|}}
         <a href="#" onclick={{route-action "toggleSelected" ytVideo}}>
             {{ytVideo.title}}

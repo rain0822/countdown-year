@@ -16,15 +16,27 @@ export default Route.extend({
             this.controller.set('ytSubVideos', videos);
             this.get('cookies').write('videos', JSON.stringify(videos));
         },
-        toggleSlidePushMenu() {
-            this.controller.toggleProperty('showMenu');
-            this.controller.toggleProperty('pushMenu');
+        toggleLeftPushMenu() {
+            this.controller.toggleProperty('showLeftMenu');
+            this.controller.toggleProperty('pushLeftMenu');
+        },
+        toggleInfoPushMenu() {
+            this.controller.toggleProperty('showInfoMenu');
+            this.controller.toggleProperty('pushInfoMenu');
         },
         toggleSelected(video) {
             Ember.set(video, 'isSelected', !Ember.get(video, 'isSelected'));
             let videos = this.controller.get('ytVideos');
             this.controller.set('ytSubVideos', videos);
-            this.get('cookies').write('videos', JSON.stringify(videos));
+            let videosToCookie = [];
+            videos.forEach(function(video) {
+                videosToCookie.push({
+                    id: Ember.get(video, 'id'),
+                    isSelected: Ember.get(video, 'isSelected'),
+                    isTop: Ember.get(video, 'isTop')
+                });
+            });
+            this.get('cookies').write('videos', JSON.stringify(videosToCookie));
         }
     }
 });
