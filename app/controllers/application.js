@@ -14,21 +14,21 @@ export default Controller.extend({
         return this.get('screen.width') / 4;
     }),
     ytVideos: [{
-        id: 'Jv3zvWZlXkk',
-        title: '終於結束的起點'
+        id: 'u6wyRhL2ZL4',
+        title: '台北最HIGH新年城'
     },{
-        id: 'pd3eV-SG23E',
-        title: '後來的我們'
+        id: 'miI6KnXkR64',
+        title: '飛躍桃園'
     },{
-        /*id: '38lcQsEMGrk',
-        title: '我不願讓你一個人'
-    },{*/
-        /*id: '_o0oeyCtoFA',
-        title: '知足'
-    },{*/
-        /*id: 'Y-0Ra3PvTWg',
-        title: '乾杯'
-    },{*/
+        id: 'DDxeE_Hdotc',
+        title: '台中麗寶'
+    },{
+        id: 'c0fdh1CoCUc',
+        title: '台南心時代'
+    },{
+        id: 'VNU1MR8qNtk',
+        title: '愛Sharing高雄夢時代'
+    }/*,{
         id: 'zBJjFEE0rUc',
         title: '突然好想你'
     },{
@@ -47,12 +47,12 @@ export default Controller.extend({
         id: 'R2s-H_crYkc',
         title: '倔強'
     },{
-        /*id: 'iSkRGgYSQfY',
+        id: 'iSkRGgYSQfY',
         title: '戀愛ing'
-    },{*/
+    },{
         id: '5VUUGZ1-nlY',
         title: '志明與春嬌'
-    }],
+    }*/],
     /*ytResetVideos: observer('mainVideo.id', function() {
         let ytOddVideos = [];
         let ytEvenVideos = [];
