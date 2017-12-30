@@ -1,6 +1,6 @@
 {
-  "name": "Let's Cook",
-  "short_name": "Let's Cook",
+  "name": "2018 全台跨年直播演唱會",
+  "short_name": "2018 跨年演唱會",
   "description": "An app for organizing your weekly menu and groceries list.",
   "start_url": "/",
   "display": "standalone",
