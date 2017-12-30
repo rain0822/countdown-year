@@ -1,51 +1,64 @@
-
-
 <div class="row">
     <div class="col s12 l6" style="padding: 0px;">
         {{#sticky-element}}
             <div class="card" style="margin: 0px;">
-                <div>
-                    {{#if isChanged123}}{{else}}
-                        {{ember-youtube ytid=mainVideo.id playerVars=playerVars width='100%' height=ytHeight delegate=this delegate-as="emberYoutube"}}
-                    {{/if}}
-                </div>
-                <div class="card-content">
-                    <button {{action "togglePlay" target=emberYoutube}} class="btn-floating waves-effect">
-                        {{#if emberYoutube.isPlaying}}
-                            <i class="material-icons">&#xE034;</i>
-                        {{else}}
-                            <i class="material-icons">&#xE037;</i>
-                        {{/if}}
-                    </button>
-                    <button {{action "toggleVolume" target=emberYoutube}} class="btn-floating waves-effect">
-                        {{#if emberYoutube.isMuted}}
-                            <i class="material-icons red">&#xE04F;</i>
-                        {{else}}
-                            <i class="material-icons">&#xE050;</i>
-                        {{/if}}
-                    </button>
-                    <div class="right">{{mainVideo.title}}</div>
-                </div>
+                <a href="#" class="btn" onclick={{route-action "toggleSlidePushMenu"}}>{{fa-icon "bars"}}</a>
+                <span>2018 跨年演唱會直播</span>
+                {{#if topVideo}}
+                    <div>
+                        {{ember-youtube ytid=topVideo.id playerVars=playerVars width='100%' height=ytHeight delegate=this delegate-as="emberYoutube"}}
+                    </div>
+                    <div class="card-content">
+                        <button {{action "togglePlay" target=emberYoutube}} class="btn-floating waves-effect">
+                            {{#if emberYoutube.isPlaying}}
+                                <i class="material-icons">&#xE034;</i>
+                            {{else}}
+                                <i class="material-icons">&#xE037;</i>
+                            {{/if}}
+                        </button>
+                        <button {{action "toggleVolume" target=emberYoutube}} class="btn-floating waves-effect">
+                            {{#if emberYoutube.isMuted}}
+                                <i class="material-icons red">&#xE04F;</i>
+                            {{else}}
+                                <i class="material-icons">&#xE050;</i>
+                            {{/if}}
+                        </button>
+                        <div class="right">{{topVideo.title}}</div>
+                    </div>
+                {{/if}}
             </div>
         {{/sticky-element}}
     </div>
     <div class="col s12 l6">
         <div class="row">
-            {{#each ytSubVideos as |ytVideo|}}
-                <div class="col s6">{{cy-youtube ytVideo=ytVideo}}</div>
+            {{#each ytVideos as |ytVideo|}}
+                {{#if ytVideo.isSelected}}
+                    {{#unless ytVideo.isTop}}
+                        <div class="col s6">{{cy-youtube ytVideo=ytVideo}}</div>
+                    {{/unless}}
+                {{/if}}
             {{/each}}
         </div>
     </div>
 </div>
-    {{!#sticky-element}}
-        <!--<ul class="tabs row">
-            <li class="tab col s6"><a href="#witch">觀看</a></li>
-            <li class="tab col s6"><a href="#choose">選擇</a></li>
-        </ul>-->
-    {{!/sticky-element}}
+{{!#sticky-element}}
+    <!--<ul class="tabs row">
+        <li class="tab col s6"><a href="#witch">觀看</a></li>
+        <li class="tab col s6"><a href="#choose">選擇</a></li>
+    </ul>-->
+{{!/sticky-element}}
 
-    {{!#link-to 'page1'}}<!--page1-->{{!/link-to}}
-    {{!#link-to 'page2'}}<!--page2-->{{!/link-to}}
-    <br/>
-    {{outlet}}
-    {{allCookies}}
+{{!#link-to 'page1'}}<!--page1-->{{!/link-to}}
+{{!#link-to 'page2'}}<!--page2-->{{!/link-to}}
+<br/>
+{{outlet}}
+{{allCookies}}
+
+{{#esp-menu position="left" pushMenu=pushMenu open=showMenu customClasses='slide-push-menu'}}
+    {{#each ytVideos as |ytVideo|}}
+        <a href="#" onclick={{route-action "toggleSelected" ytVideo}}>
+            {{ytVideo.title}}
+            {{#if ytVideo.isSelected}}{{fa-icon "check"}}{{/if}}
+        </a>
+    {{/each}}
+{{/esp-menu}}

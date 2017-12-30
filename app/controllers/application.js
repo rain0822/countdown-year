@@ -73,10 +73,38 @@ export default Controller.extend({
         modestbranding: 1
     },
     init() {
-        this.set('ytSubVideos', this.get('ytVideos'));
-        let mainVideo = this.get('ytSubVideos').objectAt(0);
-        this.set('mainVideo', mainVideo);
-        this.get('ytSubVideos').removeObject(mainVideo);
+
+        let cookieService = this.get('cookies');
+        let videos = cookieService.read()['videos'];
+        //items = [];
+        if(Ember.isEmpty(videos)) {
+            videos = this.get('ytVideos');
+            let topVideo = videos.objectAt(0);
+            Ember.set(topVideo, 'isTop', true);
+            this.set('topVideo', topVideo);
+        } else {
+            videos = JSON.parse(videos);
+            let ytVideos = this.get('ytVideos');
+            let self = this;
+            videos.forEach(function(video) {
+                ytVideos.forEach(function(ytVideo) {
+                    if(Ember.get(video, 'id') === Ember.get(ytVideo, 'id')) {
+                        if(Ember.get(video, 'isSelected')) {
+                            Ember.set(ytVideo, 'isSelected', true);
+                        }
+                        if(Ember.get(video, 'isTop')) {
+                            Ember.set(ytVideo, 'isTop', true);
+                            self.set('topVideo', ytVideo);
+                        }
+                    }
+                });
+            });
+        }
+
+        this.set('ytSubVideos', videos);
+
+        this.set('showMenu', false);
+        this.set('pushMenu', false);
 /*
         let ytLeftVideos = [];
         let ytRightVideos = [];

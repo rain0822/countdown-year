@@ -8,7 +8,7 @@ module.exports = function(/* environment, appConfig */) {
   return {
     name: "countdown-year",
     short_name: "countdown-year",
-    description: "",
+    description: "演唱會",
     start_url: "/countdown-year",
     display: "standalone",
     background_color: "#fff",
