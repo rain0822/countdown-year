@@ -62,10 +62,6 @@
 {{!#link-to 'page1'}}<!--page1-->{{!/link-to}}
 {{!#link-to 'page2'}}<!--page2-->{{!/link-to}}
 <br/>
-{{outlet}}
-{{allCookies}}
-
-
 {{#esp-menu position="left" pushMenu=pushInfoMenu open=showInfoMenu customClasses='slide-push-menu'}}
     <a href="#" class="btn menu-btn" onclick={{route-action "toggleInfoPushMenu"}}>x</a>
     <div style="margin: 1em;">
@@ -91,3 +87,6 @@
         </a>
     {{/each}}
 {{/esp-menu}}
+
+{{outlet}}
+

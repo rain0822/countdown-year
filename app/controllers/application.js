@@ -11,7 +11,9 @@ export default Controller.extend({
     minutes: '31',
     seconds: '32',
     ytHeight: computed('screen.width', function() {
-        return this.get('screen.width') / 4;
+        let width = this.get('screen.width');
+        if (width > 992) return width / 4;
+        return width / 2;
     }),
     ytVideos: [{
         id: 'u6wyRhL2ZL4',
