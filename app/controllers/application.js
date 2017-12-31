@@ -55,16 +55,16 @@ export default Controller.extend({
         end: '2018/01/01 00:30',
         hosts: ['胡瓜', '白家綺','莎莎','阿翔'],
         artists: ['謝金燕','郭書瑤','曾之喬','畢書盡(Bii)','鼓鼓','曾沛慈','家家','徐佳瑩','孫淑媚','八三夭','滅火器樂團','生祥福團','許富凱','王建復','羅平','楊蒨時']
+    },{
+        id: 'EBYIb_wHWNk',
+        title: '五月天陪你跨年'
+    },{
+        id: '4JNd_NW4zU4',
+        title: '花蓮太平洋觀光節'
+    },{
+        id: 'duM06hMkruA',
+        title: '台中星光璀璨迎花博'
     }/*,{
-        id: 'zBJjFEE0rUc',
-        title: '突然好想你'
-    },{
-        id: 'znhb-_KgLoM',
-        title: '傷心的人別聽慢歌'
-    },{
-        id: 'zdF9gOpFoIQ',
-        title: '派對動物'
-    },{
         id: 'jQE6biHTDow',
         title: '離開地球表面'
     },{
