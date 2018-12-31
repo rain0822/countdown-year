@@ -64,7 +64,7 @@ export default Controller.extend({
         hosts: [],
         artists: ['八三夭', '閃靈', '四分衛', '一九七六', '麋先生', '滅火器', '告五人', '929', '記號士', '馬克白', 'Broken By The Scream', 'Su凸ko D凹koi', '三十萬年老虎鉗', 'a crowd of rebellion', '小球—莊鵑瑛', '神奇膠、PAP YEAHH', 'Manhole New World', '老王樂隊', 'MONNI、FNGDY 瘋笛', '固定客海克力斯', '最後一擊', 'P!SCO']
       },{
-        id: 'ONjgZwmA4Cw',
+        id: '1w-o2N2Ae4A',
         title: '高雄 夢時代跨年派對',
         address: '高雄夢時代廣場',
         start: '2018/12/31 19:00',
@@ -79,6 +79,38 @@ export default Controller.extend({
         end: '2019/01/01 00:30',
         hosts: [],
         artists: ['Bii畢書盡', '蕭秉治(廷廷)', '黃國倫', 'JR紀言愷', '袁詠琳', 'Erika', '阿喜', '子閎', '明杰', '羅平', '盧學叡', '楊程鈞', '陳夢晨', 'SASA', 'ASA']
+      },{
+        id: 'QFQBFq7Rt_c',
+        title: '「人生無限公司」台中無限放大版',
+        address: '',
+        start: '2018/12/31 23:40',
+        end: '',
+        hosts: [],
+        artists: []
+      },{
+        id: 'kNIesCR0_ro',
+        title: '臺北101燈光煙火秀',
+        address: '',
+        start: '2019/01/01 00:00',
+        end: '',
+        hosts: [],
+        artists: []
+      },{
+        id: '3Xy3jJQUZ6s',
+        title: '香港維多利亞港跨年音樂煙火秀',
+        address: '',
+        start: '2019/01/01 00:00',
+        end: '',
+        hosts: [],
+        artists: []
+      },{
+        id: 'iUNd-zC5g5k',
+        title: '雪梨大橋跨年煙火秀',
+        address: '',
+        start: '2019/01/01 00:00',
+        end: '',
+        hosts: [],
+        artists: []
       }],
 
 
