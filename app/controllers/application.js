@@ -71,7 +71,15 @@ export default Controller.extend({
         end: '2019/01/01 01:00',
         hosts: [],
         artists: ['宇宙人', '曾沛慈', '大賀兄弟', '吳汶芳', '大支', '張艾莉', '蔡旻佑', '翁立友', '愷樂', '茄子蛋', '蕭煌奇', '玖壹壹']
-      }{
+      },{
+        id: 'zwQBJWdzNxI',
+        title: '嘉義 全嘉藝起來',
+        address: '嘉義市體育場',
+        start: '2018/12/31 15:00',
+        end: '',
+        hosts: [],
+        artists: []
+      },{
         id: 'YB2sVJjxkeM',
         title: '花蓮 太平洋觀光節',
         address: '六期重劃區(花蓮市中山路與重慶路交叉口)',
@@ -79,6 +87,14 @@ export default Controller.extend({
         end: '2019/01/01 00:30',
         hosts: [],
         artists: ['Bii畢書盡', '蕭秉治(廷廷)', '黃國倫', 'JR紀言愷', '袁詠琳', 'Erika', '阿喜', '子閎', '明杰', '羅平', '盧學叡', '楊程鈞', '陳夢晨', 'SASA', 'ASA']
+      },{
+        id: 'szIpXC05K6I',
+        title: '劍湖山 金光閃閃',
+        address: '',
+        start: '',
+        end: '',
+        hosts: [],
+        artists: []
       },{
         id: 'jjq2U8O5kZY',
         title: '淡水 曙光祭',
