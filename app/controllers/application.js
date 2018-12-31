@@ -16,14 +16,6 @@ export default Controller.extend({
         return width / 2;
     }),
       ytVideos:[{
-        id: 'Oof6ZeRjHv8',
-        title: '台北、高雄彩排LIVE',
-        address: '',
-        start: '',
-        end: '',
-        hosts: [],
-        artists: []
-      },{
         id: 'wH1b4aDSjLo',
         title: '台北 狂放電',
         address: '臺北市政府前廣場',
@@ -41,7 +33,7 @@ export default Controller.extend({
         artists: ['鏽鉚釘樂團', '搖滾大嬸', '老王樂隊', '台客電力公司', '八十八顆芭樂籽', '滅火器', '董事長樂團', 'su凸kod凹koi(JP)']
       },{
         id: '-t6L6HONHng',
-        title: '桃園 擁抱美好跨年晚會',
+        title: '桃園 擁抱美好',
         address: '桃園高鐵站前廣場(近桃園高鐵站，桃園市中壢區高鐵北路一段6號)',
         start: '2018/12/31 18:30',
         end: '2019/01/01 00:30',
@@ -49,7 +41,7 @@ export default Controller.extend({
         artists: ['翁立友', '謝金燕', '畢書盡', 'BOXING', '田亞霍', '李佳薇', '李建軒', '陳彥允', '李玉璽', 'Lami girls', 'A TEAM', '孟耿如', '宇宙人', '艾怡良', 'HIGHLIGHT(梁耀燮、李起光)', '陳芳語']
       },{
         id: 'Dr0HanFpio0',
-        title: '台中后里 依舊幸福',
+        title: '台中 依舊幸福',
         address: '麗寶樂園第二停車場',
         start: '2018/12/31 18:00',
         end: '2019/01/01 01:00',
@@ -72,6 +64,14 @@ export default Controller.extend({
         hosts: ['浩角翔起','艾力克斯','Janet'],
         artists: ['周湯豪', '八三夭', '丁噹', '黃小琥', '安心亞', '阿達', '愷樂', '周興哲', 'OZI', '87樂團', '曹雅雯']
       },{
+        id: 'bwVNbj7VrHs',
+        title: '台南 心時代',
+        address: '高鐵臺南站高鐵特區廣場',
+        start: '2018/12/31 18:00',
+        end: '2019/01/01 01:00',
+        hosts: [],
+        artists: ['宇宙人', '曾沛慈', '大賀兄弟', '吳汶芳', '大支', '張艾莉', '蔡旻佑', '翁立友', '愷樂', '茄子蛋', '蕭煌奇', '玖壹壹']
+      }{
         id: 'YB2sVJjxkeM',
         title: '花蓮 太平洋觀光節',
         address: '六期重劃區(花蓮市中山路與重慶路交叉口)',
@@ -80,8 +80,16 @@ export default Controller.extend({
         hosts: [],
         artists: ['Bii畢書盡', '蕭秉治(廷廷)', '黃國倫', 'JR紀言愷', '袁詠琳', 'Erika', '阿喜', '子閎', '明杰', '羅平', '盧學叡', '楊程鈞', '陳夢晨', 'SASA', 'ASA']
       },{
+        id: 'jjq2U8O5kZY',
+        title: '淡水 曙光祭',
+        address: '',
+        start: '',
+        end: '',
+        hosts: [],
+        artists: []
+      },{
         id: 'QFQBFq7Rt_c',
-        title: '「人生無限公司」台中無限放大版',
+        title: '人生無限公司 台中無限放大版',
         address: '',
         start: '2018/12/31 23:40',
         end: '',
