@@ -15,7 +15,50 @@ export default Controller.extend({
         if (width > 992) return width / 4;
         return width / 2;
     }),
-    ytVideos: [{
+      ytVideos:[{
+        id: 'wH1b4aDSjLo',
+        title: '台北 狂放電',
+        address: '',
+        start: '2018/12/31 19:00',
+        end: '2019/01/01 00:30',
+        hosts: ['陳建州', '天心', '莎莎', '海裕芬'],
+        artists: ['張惠妹','頑童','韓團EXID','安那','吳思賢','謝和弦','鼓鼓 呂思緯','蕭秉治 廷廷','MC耀宗','浩室酷姬']
+      },{
+        id: 'Q-Mo9yJtKqU',
+        title: '基隆 搖滾舞台',
+        address: '',
+        start: '',
+        end: '',
+        hosts: [],
+        artists: []
+      },{
+        id: 'ONjgZwmA4Cw',
+        title: '台中 麗寶樂園',
+        address: '',
+        start: '',
+        end: '',
+        hosts: [],
+        artists: []
+      },{
+        id: 'ONjgZwmA4Cw',
+        title: '高雄 夢時代跨年派對',
+        address: '',
+        start: '',
+        end: '',
+        hosts: [],
+        artists: []
+      },{
+        id: 'YB2sVJjxkeM',
+        title: '花蓮 太平洋觀光節',
+        address: '',
+        start: '',
+        end: '',
+        hosts: [],
+        artists: []
+      }],
+
+
+    ytVideos2: [{
         id: 'u6wyRhL2ZL4',
         title: '台北最HIGH新年城',
         address: '台北市政府前廣場(11008 臺北市信義區市府路1號)',
