@@ -24,6 +24,14 @@ export default Controller.extend({
         hosts: ['陳建州', '天心', '莎莎', '海裕芬'],
         artists: ['張惠妹','頑童','韓團EXID','安那','吳思賢','謝和弦','鼓鼓 呂思緯','蕭秉治 廷廷','MC耀宗','浩室酷姬']
       },{
+        id: 'xf1VE3Bs3wM',
+        title: '人生無限公司 台中無限放大版',
+        address: '',
+        start: '2018/12/31 23:40',
+        end: '',
+        hosts: [],
+        artists: []
+      },{
         id: 'Q-Mo9yJtKqU',
         title: '基隆 搖滾舞台',
         address: '基隆港西三倉庫旁停車場',
@@ -100,14 +108,6 @@ export default Controller.extend({
         title: '淡水 曙光祭',
         address: '',
         start: '',
-        end: '',
-        hosts: [],
-        artists: []
-      },{
-        id: 'QFQBFq7Rt_c',
-        title: '人生無限公司 台中無限放大版',
-        address: '',
-        start: '2018/12/31 23:40',
         end: '',
         hosts: [],
         artists: []
