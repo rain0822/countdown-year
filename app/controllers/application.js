@@ -16,9 +16,17 @@ export default Controller.extend({
         return width / 2;
     }),
       ytVideos:[{
+        id: 'Oof6ZeRjHv8',
+        title: '台北、高雄彩排LIVE',
+        address: '',
+        start: '',
+        end: '',
+        hosts: [],
+        artists: []
+      },{
         id: 'wH1b4aDSjLo',
         title: '台北 狂放電',
-        address: '',
+        address: '臺北市政府前廣場',
         start: '2018/12/31 19:00',
         end: '2019/01/01 00:30',
         hosts: ['陳建州', '天心', '莎莎', '海裕芬'],
@@ -26,35 +34,51 @@ export default Controller.extend({
       },{
         id: 'Q-Mo9yJtKqU',
         title: '基隆 搖滾舞台',
-        address: '',
-        start: '',
+        address: '基隆港西三倉庫旁停車場',
+        start: '2018/12/31 20:00',
         end: '',
-        hosts: [],
-        artists: []
+        hosts: ['杜詩梅'],
+        artists: ['鏽鉚釘樂團', '搖滾大嬸', '老王樂隊', '台客電力公司', '八十八顆芭樂籽', '滅火器', '董事長樂團', 'su凸kod凹koi(JP)']
       },{
-        id: 'ONjgZwmA4Cw',
-        title: '台中 麗寶樂園',
-        address: '',
-        start: '',
+        id: '-t6L6HONHng',
+        title: '桃園 擁抱美好跨年晚會',
+        address: '桃園高鐵站前廣場(近桃園高鐵站，桃園市中壢區高鐵北路一段6號)',
+        start: '2018/12/31 18:30',
+        end: '2019/01/01 00:30',
+        hosts: ['黃子佼', 'LULU'],
+        artists: ['翁立友', '謝金燕', '畢書盡', 'BOXING', '田亞霍', '李佳薇', '李建軒', '陳彥允', '李玉璽', 'Lami girls', 'A TEAM', '孟耿如', '宇宙人', '艾怡良', 'HIGHLIGHT(梁耀燮、李起光)', '陳芳語']
+      },{
+        id: 'Dr0HanFpio0',
+        title: '台中后里 依舊幸福',
+        address: '麗寶樂園第二停車場',
+        start: '2018/12/31 18:00',
+        end: '2019/01/01 01:00',
+        hosts: ['阿KEN', '謝忻'],
+        artists: ['八三夭(開場)', '盧廣仲', '安心亞', '許富凱', '鼓鼓', '艾怡良', '茄子蛋', '方炯鑌', '小男孩樂團', '方炯鑌', '無雙樂團', '李千那', '陳芳語', '伍佰&China Blue(壓軸)']
+      },{
+        id: 'WWeXWxEoqWw',
+        title: '台中 音樂祭',
+        address: '台中圓滿戶外劇場 暨文心森林公園',
+        start: '2018/12/31 19:00',
         end: '',
         hosts: [],
-        artists: []
+        artists: ['八三夭', '閃靈', '四分衛', '一九七六', '麋先生', '滅火器', '告五人', '929', '記號士', '馬克白', 'Broken By The Scream', 'Su凸ko D凹koi', '三十萬年老虎鉗', 'a crowd of rebellion', '小球—莊鵑瑛', '神奇膠、PAP YEAHH', 'Manhole New World', '老王樂隊', 'MONNI、FNGDY 瘋笛', '固定客海克力斯', '最後一擊', 'P!SCO']
       },{
         id: 'ONjgZwmA4Cw',
         title: '高雄 夢時代跨年派對',
-        address: '',
-        start: '',
-        end: '',
-        hosts: [],
-        artists: []
+        address: '高雄夢時代廣場',
+        start: '2018/12/31 19:00',
+        end: '2019/01/01 01:00',
+        hosts: ['浩角翔起','艾力克斯','Janet'],
+        artists: ['周湯豪', '八三夭', '丁噹', '黃小琥', '安心亞', '阿達', '愷樂', '周興哲', 'OZI', '87樂團', '曹雅雯']
       },{
         id: 'YB2sVJjxkeM',
         title: '花蓮 太平洋觀光節',
-        address: '',
-        start: '',
-        end: '',
+        address: '六期重劃區(花蓮市中山路與重慶路交叉口)',
+        start: '2018/12/31 18:00',
+        end: '2019/01/01 00:30',
         hosts: [],
-        artists: []
+        artists: ['Bii畢書盡', '蕭秉治(廷廷)', '黃國倫', 'JR紀言愷', '袁詠琳', 'Erika', '阿喜', '子閎', '明杰', '羅平', '盧學叡', '楊程鈞', '陳夢晨', 'SASA', 'ASA']
       }],
 
 
