@@ -13,7 +13,7 @@
                             {{fa-icon "bars"}}
                         </a>
                     {{/unless}}
-                    <span>2019 跨年演唱會直播</span>
+                    <span>2020 跨年演唱會直播</span>
                 </div>
                 {{#if topVideo}}
                     <div>
@@ -42,7 +42,7 @@
     </div>
     <div class="col s12 l6">
         <div class="row">
-            {{#each ytVideos as |ytVideo|}}
+            {{#each ytVideos2020 as |ytVideo|}}
                 {{#if ytVideo.isSelected}}
                     {{#unless ytVideo.isTop}}
                         <div class="col s6">{{cy-youtube ytVideo=ytVideo}}</div>
@@ -80,7 +80,7 @@
 
 {{#esp-menu position="right" pushMenu=pushLeftMenu open=showLeftMenu customClasses='slide-push-menu'}}
     <a href="#" class="btn menu-btn" onclick={{route-action "toggleLeftPushMenu"}}>x</a>
-    {{#each ytVideos as |ytVideo|}}
+    {{#each ytVideos2020 as |ytVideo|}}
         <a href="#" onclick={{route-action "toggleSelected" ytVideo}}>
             {{ytVideo.title}}
             {{#if ytVideo.isSelected}}{{fa-icon "check"}}{{/if}}

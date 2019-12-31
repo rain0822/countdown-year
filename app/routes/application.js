@@ -12,7 +12,7 @@ export default Route.extend({
             this.controller.set('topVideo', video);
             this.controller.set('hours', '21');
 
-            let videos = this.controller.get('ytVideos');
+            let videos = this.controller.get('ytVideos2020');
             this.controller.set('ytSubVideos', videos);
             this.get('cookies').write('videos', JSON.stringify(videos));
         },
@@ -26,7 +26,7 @@ export default Route.extend({
         },
         toggleSelected(video) {
             Ember.set(video, 'isSelected', !Ember.get(video, 'isSelected'));
-            let videos = this.controller.get('ytVideos');
+            let videos = this.controller.get('ytVideos2020');
             this.controller.set('ytSubVideos', videos);
             let videosToCookie = [];
             videos.forEach(function(video) {

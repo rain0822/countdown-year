@@ -15,6 +15,55 @@ export default Controller.extend({
         if (width > 992) return width / 4;
         return width / 2;
     }),
+    ytVideos2020: [{
+      id: 'lcP5Er7HoFw',
+      title: '愛在桃園‧幸福美好',
+      address: '',
+      start: '',
+      end: '',
+      hosts: [],
+      artists: []
+    },{
+      id: 'ci305BVeMbg',
+      title: '狂歡夜-后里場',
+      address: '',
+      start: '',
+      end: '',
+      hosts: [],
+      artists: []
+    },{
+      id: 'qMjhlydDEyU',
+      title: '狂歡夜-太平場',
+      address: '',
+      start: '',
+      end: '',
+      hosts: [],
+      artists: []
+    },{
+      id: 'N5vfcCaEB8E',
+      title: '全嘉藝起來',
+      address: '',
+      start: '',
+      end: '',
+      hosts: [],
+      artists: []
+    },{
+      id: 'ugVlpB3NNNU',
+      title: '高雄夢時代',
+      address: '',
+      start: '',
+      end: '',
+      hosts: [],
+      artists: []
+    },{
+      id: 'bLN8LOgd22k',
+      title: '花蓮太平洋觀光節',
+      address: '',
+      start: '',
+      end: '',
+      hosts: [],
+      artists: []
+    }],
       ytVideos:[{
         id: 'wH1b4aDSjLo',
         title: '台北 狂放電',
@@ -228,13 +277,13 @@ export default Controller.extend({
         let videos = cookieService.read()['videos'];
         //items = [];
         if(Ember.isEmpty(videos)) {
-            videos = this.get('ytVideos');
+            videos = this.get('ytVideos2020');
             let topVideo = videos.objectAt(0);
             Ember.set(topVideo, 'isTop', true);
             this.set('topVideo', topVideo);
         } else {
             videos = JSON.parse(videos);
-            let ytVideos = this.get('ytVideos');
+            let ytVideos = this.get('ytVideos2020');
             let self = this;
             videos.forEach(function(video) {
                 ytVideos.forEach(function(ytVideo) {
