@@ -46,7 +46,7 @@ return e>992?e/4:e/2}),ytVideos2020:[{
     end: '',
     hosts: ['咖啡糖賢齡'],
     artists: ['五堅情、曹雅雯、張三李四、曹雅雯、黃霆睿、琳誼、黃奕儒 Ezu、顏力妃、KSwo、ALL IN 5']
-  , {
+  }, {
     id: 'klOm_bWGog4',
     title: '台南 演唱會',
     address: '台南市政府永華市政中心西側廣場',
