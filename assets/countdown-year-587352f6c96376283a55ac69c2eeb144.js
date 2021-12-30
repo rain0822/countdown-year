@@ -7,6 +7,14 @@ var t=Ember.Controller,n=Ember.inject.service,r=Ember.computed
 Ember.observer
 e.default=t.extend({cookies:n(),moment:n(),screen:n(),hours:"32",minutes:"31",seconds:"32",ytHeight:r("screen.width",function(){var e=this.get("screen.width")
 return e>992?e/4:e/2}),ytVideos2020:[{
+    id: '28H69BmaW-g',
+    title: '基隆 跨年',
+    address: '台北市政府府前廣場',
+    start: '18:30',
+    end: '01:00',
+    hosts: ['aa'],
+    artists: ['bb']
+  }, {
     id: 'ZSP2k4J9H20',
     title: '臺北最High新年城',
     address: '',
@@ -39,6 +47,14 @@ return e>992?e/4:e/2}),ytVideos2020:[{
     hosts: [],
     artists: []
   }, {
+    id: 'klOm_bWGog4',
+    title: '台南 演唱會',
+    address: '',
+    start: '',
+    end: '',
+    hosts: [],
+    artists: []
+  }, {
     id: 'lGXQg06JFgw',
     title: '高雄 高流舞台',
     address: '',
@@ -55,16 +71,8 @@ return e>992?e/4:e/2}),ytVideos2020:[{
     hosts: [],
     artists: []
   }, {
-    id: 'klOm_bWGog4',
-    title: '台南 演唱會',
-    address: '',
-    start: '',
-    end: '',
-    hosts: [],
-    artists: []
-  }, {
-    id: '28H69BmaW-g',
-    title: '基隆 跨年',
+    id: 'Z1q-dh_ShQs',
+    title: '花蓮 太平洋觀光節',
     address: '',
     start: '',
     end: '',
